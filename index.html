@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" /> 
+
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+
+  <!-- for animations  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>Yasir Masood</title>
+</head>
+
+
+<style type="text/css">
+  body 
+  {
+    font-family: 'Poppins';
+    background-color: rgb(0, 0, 0);
+  }
+  #home-img
+  {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  p 
+  {
+    opacity: 0.7;
+
+
+  }
+  i:hover,a:hover
+  {
+    color: mediumaquamarine !important;
+
+  }
+  .fa-whatsapp:hover,.contact-us:hover,.logo:hover
+  {
+    color: white !important;
+  }
+  .nav,.social,nav,.nav-2
+  {
+    z-index: 999;
+  }
+  .navbar
+  {
+    width: 78%;
+    z-index: 999;
+    margin: auto !important;
+  }
+  .bg-mediumaquamarine
+  {
+    background-color:aquamarine;
+  }
+  .border-mediumaquamarine
+  {
+    border: none;
+    border-bottom:10px solid aquamarine; 
+  }
+
+  .border-mediumaquamarine-contact
+  {
+    border:10px solid aquamarine;  
+  }
+  .text-mediumaquamarine
+  {
+    color: aquamarine;
+  }
+  .custom-border
+  {
+    border: 2px solid aquamarine;
+  }
+  a[title] {
+    color:red !important;
+  }
+  .home-img-fancy-border
+  {
+    border: 35px solid;
+    border-image:linear-gradient(to top, mediumaquamarine 45%, mediumaquamarine 35%, mediumaquamarine 40%,#343a40 50%, #343a40 75%, #343a40 75%) 5;
+  }
+  .fancy-border {
+
+    margin-top: -40px;
+    border: 30px solid;
+    border-image:linear-gradient(to top, mediumaquamarine 25%, mediumaquamarine 25%, mediumaquamarine 50%,#212529 50%, #212529 75%, #212529 75%) 5;
+  }
+
+  .about-img-fancy-border
+  {
+    border: 35px solid;
+    border-image:linear-gradient(to left, mediumaquamarine 25%, mediumaquamarine 25%, mediumaquamarine 50%,#212529 50%, #212529 75%, #212529 75%) 5
+  }
+  .line 
+  {
+   height: 3px;
+   flex: 1;
+   max-width: 100px !important;
+ }
+ .fa-globe, .fa-book, .fa-laptop
+ {
+  font-size: 100px !important;
+}
+
+.skills {
+  text-align: right;
+  color: white;
+  height: 6px;
+  box-shadow: 0 0 10px aquamarine;
+
+}
+.html {
+  width: 90%;
+  animation: html 4s;
+}
+
+@keyframes vertical {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  36% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  43% {
+    opacity: 0;
+    -webkit-transform: translateY(-90px);
+    transform: translateY(-90px);
+  }
+  78% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.verticalflip {
+  font-size: 300%;
+  font-weight: bold;
+  border: none;
+  padding: 3px;
+  border-left: 5px groove white;
+}
+.verticalflip span {
+  animation: vertical 7.5s linear infinite 0s;
+  -ms-animation: vertical 7.5s linear infinite 0s;
+  -webkit-animation: vertical 7.5s linear infinite 0s;
+  color: mediumaquamarine;
+  position: absolute;
+  opacity: 0;
+  padding: 3px;
+  
+}
+.verticalflip span:nth-child(2) {
+  -ms-animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+.verticalflip span:nth-child(3) {
+  -ms-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+/*Home text Animations*/
+
+.cardd:hover
+{
+  transform: scale(1.05);
+  box-shadow: mediumaquamarine 10px 3px 8px;
+}
+
+.cardd  img
+{
+  max-height: 150px;
+  min-height: 150px;
+}
+.cardd .card-body h6
+{
+  min-height: 30px;
+}
+.cardd .card-body p
+{
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@keyframes html{ /*animate html skills*/
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 90%;
+  }
+}
+.css {width: 80%;
+  animation: css 3s;
+}
+@keyframes css{ /*animate html skills*/
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 80%;
+  }
+}
+.php {width: 60%;
+  animation: php 2s;
+}
+@keyframes php{ /*animate html skills*/
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 60%;
+  }
+}
+
+.subscribe-section
+{
+  background-image: url("https://img.freepik.com/free-photo/high-angle-desktop-with-laptop-copy-space_23-2148430882.jpg?w=826&t=st=1696051884~exp=1696052484~hmac=3766a381456f9ac8fa8ed4079d98088749aec9bedf5eeed137261b3c24ddcbe1");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*  */
+.container {
+  position: relative;
+  width: 600px;
+  height: 300px;
+}
+
+.image {
+  display: block;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(0, 0, 0,0.6);
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: mediumaquamarine 10px 3px 8px;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*Home Image Border Shake Animations */
+button:hover,i:hover,a:hover
+{
+  animation: vertical-shaking 5s infinite;
+}
+.current
+{
+  animation: vertical-shaking 5s infinite;
+  color: mediumaquamarine !important;
+}
+.navbar-whatsapp,.about-imgg
+{
+  animation: horizontal-shaking 1s infinite;
+}
+.horizontal-shake {
+  animation: horizontal-shaking 3s infinite;
+}
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+.vertical-shake {
+  animation: vertical-shaking 2s infinite;
+}
+
+@keyframes vertical-shaking {
+  0% { transform: translateY(0) }
+  25% { transform: translateY(5px) }
+  50% { transform: translateY(-5px) }
+  75% { transform: translateY(5px) }
+  100% { transform: translateY(0) }
+}
+/*Home Image Border Shake Animations */
+
+/*Download Cv button background animation */
+
+
+@keyframes particles {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500% 0;
+  }
+}
+.particle-background {
+  background: linear-gradient(90deg, mediumaquamarine, black, mediumaquamarine);
+  background-size: 500% 100%;
+  animation: particles 10s linear infinite;
+}
+/* Hire Me Button Animations  */
+@keyframes neonGlow {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff,
+    0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
+  }
+  50% {
+    text-shadow: none;
+  }
+}
+/* Apply neon glow animation on an element */
+.neon-glow-element {
+  animation: neonGlow 1.5s infinite;
+}
+/*Animated Profession on Home page*/
+.animation {
+  height:50px;
+  overflow:hidden;
+  margin-left: 1rem;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.75rem;
+  height:2.81rem;
+
+  margin-bottom: 2.81rem;
+  display:inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20%
+  {
+    margin-top: -5.62rem;
+  }
+  30% {
+    margin-top: -5.62rem;
+  }
+  40% {
+    margin-top: -11.24rem;
+  }
+  60% 
+  {
+    margin-top: -11.24rem;
+  }
+  70%
+  {
+    margin-top: -5.62rem;
+  }
+  80% 
+  {
+    margin-top: -5.62rem;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% 
+  {
+    margin-top: 0;
+  }
+}
+/*About Us Page Crousel Animations*/
+.carousel-indicators {
+  position: unset;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  color: white !important;
+}
+.carousel-indicators .about {
+  text-indent: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  color: white;
+  background-color: transparent;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.carousel-indicators .about .active {
+  color: aquamarine;
+}
+.carousel {
+  background-color: beige;
+}
+.carousel-inner img {
+  max-height: 400px;
+  max-width: 100%;
+  padding: 1em;
+  margin: auto;
+}
+/*Contact Us*/
+input, textarea
+{
+  outline: none;
+  color: white;
+}
+input::placeholder,textarea::placeholder {
+ color: white; !important;
+ opacity: 0.7;
+}
+marquee h1
+{
+  font-size: 100px;
+  -webkit-text-stroke-width: 10px;
+
+  -webkit-text-stroke: 1px rgba(0,0,0,0.6);
+
+  color:transparent;
+}
+/*Some Media Queries*/
+@media screen and (min-width: 576px) {
+  .carousel {
+    padding: 2em;
+    font-size: 1.3em;
+  }
+
+}
+@media screen and (min-width: 720px) {
+
+  .nav-2
+  {
+    position: fixed;
+  }
+}
+@media screen and (max-width: 720px) {
+  body
+  {
+    overflow: scroll;
+  }
+  .navbar
+  {
+    width: 90% !important;
+  }
+  .verticalflip {
+    font-size: 150%;
+  }
+  .first,.second,.third
+  {
+    width: 100% !important;
+  }
+}
+</style>
+<body style="background-color:#082f49">
+  <!-- Navbar Starts -->
+
+  <div class="nav-2 w-100">
+
+    <nav class="rounded-bottom p-0 navbar navbar-expand-lg navbar-dark text-start rounded-bottom" style="background-color:#082f49">
+
+      <div class="container-fluid p-0 ">
+        <div class="bg-mediumaquamarine p-md-4 p-2 rounded-start m-0">
+          <a class="navbar-brand text-dark logo" href="#home"><b>Yasir Masood</b></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-white home current" aria-current="page" href="#home"><b>Home</b></a>
+            <a class="nav-link text-white about" href="#about"><b>About</b></a>
+            <a class="nav-link text-white skillss" href="#skillss"><b>Skills</b></a>
+            <a class="nav-link text-white portfolio" href="#portfolio"><b>Portfolio</b></a>
+            <a class="nav-link text-white team" href="#team"><b>Team & Contact</b></a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="h-100 bg-mediumaquamarine p-4 px-5 m-0 rounded-end d-none d-md-block">
+       <b>
+
+        <a class="h3 h-100" href="#contact"><i class="fa-solid fa-phone text-dark"></i></a>
+      </b>
+    </a>
+  </div>
+</nav>
+</div>
+
+<!-- Navbar Ends -->
+<div id="home" class="row w-100 p-0 m-0">
+  <div class="nav  h-100 justify-content-center align-items-md-center col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 position-fixed">
+    <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 h3  text-white position-fixed navbarr rounded-top d-none d-md-block" style="background-color:rgb(0, 0, 0,0.6);">
+      <div class="w-100  m-0 p-2 text-center  rounded-end" style="border:2px solid mediumaquamarine;">
+        <b>
+          <a href="https://wa.me/+923065778113" class="">
+            <i class="navbar-whatsapp fa-brands fa-whatsapp text-mediumaquamarine h1"></i></b>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 d-none d-md-block">
+    </div>
+    <div class="home-content text-start text-white p-5 col-12 col-md-6 col-sm-6 col-xl-6 col-lg-6 mt-md-4">
+      <h2 class="m-0 py-2 "></h2>
+      <h1 class="display-1 p-0 m-0 py-2 pt-md-5 " style=" font-weight: 900;font-family:sans-serif;">Yasir<span class="text-mediumaquamarine heading-typing"></span></h1>
+      <div class="verticalflip">
+        &nbsp;
+        <span>Content Writer</span>
+        <span>Freelancer</span>
+        <span>Web Developer</span>
+      </div>
+      <p class=" d-block d-md-none py-4"> To secure a web dev position in a reputable organization to utilize my skills while making a significant role in the success of organization</p>
+      <p class=" d-none d-md-block py-4 home-para">To work and improve my skills as a web dev and find efficient and sustainable solutions to improve internet and online web space for everyone...<br>
+      To secure a web dev position in a reputable organization to utilize my skills while making a significant role in the success of organization.</p>
+      <div class="d-flex gap-3 flex-wrap">
+        <div>
+          <button class="w-100 btn btn-lg p-4 text-white neon-glow-element" style="border-color: mediumaquamarine;">Hire Me Now</button>
+        </div>
+        <div>
+
+          <button class="w-100 btn btn-lg text-dark p-4 bg-mediumaquamarine" >Download CV<i class="ms-3 fa-solid fa-arrow-down"></i> </button>
+        </div>
+      </div>
+      <!-- <button class="btn text-white w-25 d-none d-md-inline particle-background" >Download CV</button> -->
+    </div>
+    <div id="home-img" class="p-5 py-md-5 pt-0 text-center col-12 col-md-4 col-sm-4 col-xl-4 col-lg-4 mt-md-5">
+      <div class="home-img-fancy-border p-2 bg-dark rounded-3 horizontal-shake">
+        <img class="img-fluid h-100 rounded-3" src="yasir.png">
+      </div>
+      <!-- <img class="h-100 w-100 d-md-none" src="https://img.freepik.com/free-photo/woman-with-tablet-looking-camera_23-2147762332.jpg"> -->
+    </div>
+    <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1">
+      <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 position-fixed social h-100" >
+        <div class="text-center py-3 d-md-flex flex-md-column align-items-center justify-content-center rounded-start h-100">
+         <span class="bg-mediumaquamarine mx-auto rounded mb-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
+         <a href="https://www.facebook.com/yasir.doll.50702769">
+           <i class="py-2 me-3 h5 me-md-0 fa-brands fa-facebook text-white"></i></a><a href="https://wa.me/+923065778113">
+             <i class="py-2 me-3 h5 me-md-0 fa-brands fa-whatsapp text-white"></i></a><a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+               <i class="py-2 me-3 h5 me-md-0 fa-brands fa-instagram text-white"></i>
+             </a><a href=" https://snipbyte.com">
+               <i class="py-2 me-3 h5 me-md-0 fa-brands fa-google-plus text-white"></i></a><a href="https://pk.linkedin.com/in/yasir-masood-bbb873240?trk=people-guest_people_search-card">
+                 <i class="py-2 h5 fa-brands fa-linkedin text-white"></i></a>
+                 <span class="bg-mediumaquamarine mx-auto rounded mt-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
+               </div>
+             </div>
+           </div>
+         </div>
+         <!-- About Section Starts -->
+         <section class="animation-section about-section bg-dark  w-100 p-md-5
+         " id="about">
+         <div class="d-flex py-5 gap-3 justify-content-center text-mediumaquamarine">        
+          <span class="bg-white line mt-3"></span><span class="h5">About Me</span><span class="bg-white line mt-3"></span>
+        </div>
+        <div class="row py-5">
+          <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1">
+
+          </div>
+          <div class="col-12 col-sm-4 col-xs-4 col-lg-4 col-md-4 d-none d-md-block">
+            <div class="w-100 h-100 position-relative" style="border:6px solid white;">
+              <img src="about.jpg"
+              class="img-fluid rounded-3 position-absolute h-100 w-100 about-imgg" style="left: 8%; bottom: 8%; border:10px solid mediumaquamarine;">
+            </div>
+
+          </div>
+          <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1"></div>
+          <div class="col-12 col-sm-5 col-xs-5 col-lg-5 col-md-5 px-md-0 px-5 about-heading">
+            <span class="display-5 text-white fw-bolder ">Turning <span class="text-mediumaquamarine fw-bolder"> Ideas </span> into <span class="text-mediumaquamarine fw-bolder px-2 rounded"> Exceptional</span> Designs..
+          </span>
+          <br><br>
+          <div>
+            <h4 class="text-white">I'm Yasir Masood</h4>
+            <p style="color:rgb(255, 255, 255, 0.6);">My name is Yasir Masood a professional website developer from Rawalpindi Pakistan.I completed my BS degree in computer science in March 2022 from COMSATS University Pakistan.My skills and job details are given in the skills section and also in my CV You can download my CV by just clicking the following Download CV button.</p>
+            <div class="d-flex flex-wrap justify-content-around text-dark bg-mediumaquamarine rounded py-1">
+              <div>
+                <ul>
+                  <li><strong>Birthday : </strong><span> 1 Nov 1996</span></li>
+                  <li><strong>Age : </strong><span> 26</span></li>
+                  <li><strong>Status : </strong><span> Engaged</span></li>
+
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li><strong>Religion : </strong><span> Muslim</span></li>
+                  <li><strong>Phone : </strong><span> +923065778113</span></li>
+                  <li><strong>Degree : </strong><span> BS(CS)</span></li>
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+           <!--  <div class="text-md-center py-5">
+             <button class="about_btn btn btn-lg text-dark p-4 p-4 bg-mediumaquamarine" >Download CV<i class="d-none d-md-inline ms-3 fa-solid fa-arrow-down"></i> </button>
+           </div> -->
+         </div>
+
+         <div class="col-12 col-sm-2 col-xs-2 col-lg-2 col-md-2 border-0 border-end border"></div>
+
+       </div>
+       
+     </section>
+     <!-- Moving Text Starts -->
+     <div class="w-100 bg-mediumaquamarine d-none d-md-block">
+       <marquee  direction="left" >
+
+        <section id="social-media" class="d-flex gap-5">
+
+
+          <div class="d-flex text-secondary gap-5">
+
+            <h1 class="m-0 p-0"> <b>* HTML5 *</b></h1>
+            <h1 class="m-0 p-0"> <b>* CSS3 *</b></h1>
+            <h1 class="m-0 p-0"> <b>* BOOTSTRAP *</b></h1>
+            <h1 class="m-0 p-0"> <b>* JAVASCRIPT *</b></h1>
+            <h1 class="m-0 p-0"> <b>* JQUERY *</b></h1>
+            <h1 class="m-0 p-0"> <b>* PHP *</b></h1>
+            <h1 class="m-0 p-0"> <b>* WORDPRESS *</b></h1>
+            
+          </div>
+
+
+
+        </section>
+      </marquee>
+    </div>
+    <!-- About Section Ends -->
+    <!-- Skills Section Starts -->
+    <section class="skills-section w-100 p-md-5 exp-section
+    " id="skillss">
+    <div class="d-flex py-5 gap-3 justify-content-center text-mediumaquamarine">        
+      <span class="bg-white line mt-3"></span><span class="h5">My Skills & Services</span><span class="bg-white line mt-3"></span>
+    </div>
+    <div class="row d-flex justify-content-around text-white pb-2 p-5">
+      <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1"></div>
+      <div class="col-12 col-md-5 col-sm-5 col-xl-5 col-lg-5 exp_para">
+        <div class="d-flex py-1 text-white">       
+          <span class="h5">Services</span>
+        </div>
+        <div id="aboutme" class=" carousel slide p-0  d-md-flex">
+
+          <div id="carouselExampleCaptions" class="bg-dark p-0 carousel slide w-100 mx-auto" data-bs-ride="carousel" >
+            <div class="carousel-inner w-100">
+              <div class="carousel-item active text-white w-100 border border-secondary rounded text-center" data-bs-interval="3000">
+                <i class="fas fa-globe py-5 text-mediumaquamarine"></i>
+                <h4>I'M a Website <span class="text-mediumaquamarine">Developer</span></h4>
+                <p class="text-white">
+                I am a website develepor and I can easily convert any figma file into a pixel perfect website with complete backend functionalities.</p>
+              </div>
+              <div class="carousel-item text-white w-100 border border-secondary rounded text-center" data-bs-interval="3000">
+                <i class="fas fa-book py-5 text-mediumaquamarine"></i>
+
+                <h4>I'M a Blog <span class="text-mediumaquamarine">Writer</span></h4>
+                <p class="text-white">
+                  I am also a blog writer and I have written 20+ blogs as well. I can easily write a blog on any topic. You can see <a href="#">My Blogs</a>.</p>
+                </div>
+                <div class="carousel-item  text-white w-100 border border-secondary rounded text-center" data-bs-interval="3000">
+                 <i class="fas fa-laptop py-5 text-mediumaquamarine"></i>
+
+                 <h4>I'M a <span class="text-mediumaquamarine">Freelancer</span></h4>
+                 <p class="text-white">
+                  We are a team of web devs and we provide freelancing service as well, We sataisfied 100+ clients, order on our <a href="#">fiverr</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-sm-6 col-xl-6 col-lg-6 exp_para1">
+          <div class="d-flex py-1 justify-content-center gap-3 text-mediumaquamarine"> 
+            <span class="h5 pt-5 pt-md-0">Skills</span>
+          </div>
+          <div>
+            <div class="w-100 p-3 ps-md-5">
+              <div class="bg-dark p-2 text-white rounded-top d-flex justify-content-between">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="containerr bg-dark">
+                <div class="skills html bg-mediumaquamarine"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 p-3 ps-md-5">
+              <div class="bg-dark p-2 text-white rounded-top d-flex justify-content-between">
+                <span>Bootstrap</span>
+                <span>90%</span>
+              </div>
+              <div class="containerr bg-dark">
+                <div class="skills html bg-mediumaquamarine"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 p-3 ps-md-5">
+              <div class="bg-dark p-2 text-white rounded-top d-flex justify-content-between">
+                <span>JQUERY</span>
+                <span>60%</span>
+              </div>
+              <div class="containerr bg-dark">
+                <div class="skills php bg-mediumaquamarine"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 p-3 ps-md-5">
+              <div class="bg-dark p-2 text-white rounded-top d-flex justify-content-between">
+                <span>JS</span>
+                <span>80%</span>
+              </div>
+              <div class="containerr bg-dark">
+                <div class="skills css bg-mediumaquamarine"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="w-100 p-3 ps-md-5">
+              <div class="bg-dark p-2 text-white rounded-top d-flex justify-content-between">
+                <span>CSS</span>
+                <span>80%</span>
+              </div>
+              <div class="containerr bg-dark">
+                <div class="skills css bg-mediumaquamarine"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section Ends -->
+
+    <!-- Portfolio Section Starts -->
+    <section class="p-md-5 bg-dark h-100" id="portfolio">
+      <div class="d-flex gap-3 justify-content-center text-mediumaquamarine py-3"> 
+        <span class="h5">My Recent Portfolio</span>
+      </div>
+      <div class="d-none d-md-block">
+        <div  class="d-flex justify-content-center gap-3 py-3">
+          <span class="bg-white line mt-3"></span>
+          <button class="btn filter-btn active bg-mediumaquamarine"><b>I have developed many more websites but I am providing some major websites here</b></button>
+          <span class="bg-white line mt-3"></span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around flex-wrap gap-3 p-3">
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fcathy%20pearl%20portfolio%20website%20template.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Cathy Pearl Portfolio Page</h6>
+            <p>Cathy Pearl Portfolio Website, I have Develope this in Bootstrap 5</p>
+            <a href="https://cathyperl-portfolio.vercel.app/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fadvance%20to%20do%20list.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Advance Habbit List</h6>
+            <p>Advance Habbit List Using HTML CSS Bootstrap and JavaScript for snipbytesol</p>
+            <a href="https://snipbyte.github.io/habit-list/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2Fwetime%20chat%20bot%20.webp&w=750&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>WETIME Bot in Bootstrap 5</h6>
+            <p>AI-based couples games that are designed to enhance gaming experience with your partner</p>
+            <a href="https://wetime-faixirk.vercel.app/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://img.freepik.com/free-psd/american-food-website-app-template_23-2148477329.jpg?w=996&t=st=1696997046~exp=1696997646~hmac=d5475ca7e7948891cca2d76138b7cad76669f5ccacad0be7bc0fbcfdf42920f8" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Wedding Card & Flyer Designer Plugin
+            </h6>
+            <p>WooCommerce Business, Wedding Card & Flyer Designer Plugin, An HTML CSS and PHP Plugin in Wordpress</p>          
+            <a href="https://woodemos.extendons.com/carddesigner/shop/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2Fgame-time.webp&w=750&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Game Time</h6>
+            <p>Agaming website in Bootstrap. Discover, add, and explore a wide array of games while accessing.</p>
+            <a href="https://movie-time-git-master-kashifx6.vercel.app/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+        
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fhotel%20management%20system%20in%20php.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Hotel Management System</h6>
+            <p>PHP and Bootstrap Hotel Management System.</p>
+            <a href="https://snipbyte.github.io/hotel-management-system/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fonline%20attendance%20system%20in%20php%20complete%20source%20code%20by%20snipbyte.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Online Attendance Management System</h6>
+            <p>Online Attendance Management System In HTML,CSS, PHP for SnipbyteSol</p>
+            <a href="https://snipbyte.com/blogpost/online-attendance-management-system-php-source-code-snipbyte" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fcelebrity%20portfolio%20website%20template%20using%20html%20css%20bootstrap%20and%20js.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Celebrity Portfolio Website</h6>
+            <p>Celebrity Portfolio Website Template Using HTLM CSS Bootstrap and JavaScript for SnipbyteSol.</p>
+            <a href="https://snipbyte.github.io/celebrity-portfolio/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2FParlour%20Portfolio%20Website%20Using%20Html%20Css%20and%20JavaScript.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Beaty Parlour Website</h6>
+            <p>Beaty Parlour Website Template Using Html Css and JavaScript for snipbytesol</p>
+            <a href="https://snipbyte.github.io/beautyparlourportfolio/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fe-commerce%20using%20html%20css%20bootstrap%20javascript%20and%20jQuery.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Mini E-Commerce Template</h6>
+            <p>Mini e-commerce Template Using HTML , CSS , Bootstrap , JavaScript and jQuery for SnipbyteSol.</p>
+            <a href="https://snipbyte.github.io/mini-commerce/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fadvance%20portfolio%20using%20html%20css%20bootstrap%20and%20javascript.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>Pooja Sharma Advance Portfolio Website</h6>
+            <p>Advance Portfolio Using HTML , CSS , Bootstrap and JavaScript for SnipByteSol</p>
+            <a href="https://snipbyte.github.io/advance-portfolio/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fe%20commerce%20landing%20page%20template.webp&w=828&q=80" class="card-img-top img-fluid">
+          <div class="card-body">
+            <h6>E commerce Website Landing Page</h6>
+            <p>E commerce Website Landing Page Design Using Bootstrap 5 and Html 5 for Snipbytesol</p>
+            <a href="https://snipbyte.github.io/blue-gradient-e-commerce-landing-page/" class="btn bg-mediumaquamarine">Veiw Demo</a>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </section>
+    <!-- Portfolio Section Ends -->
+
+
+
+
+
+
+    <!-- My Team  -->
+    <section class="team-section w-100
+    " id="team">
+    <div class="d-flex py-5 gap-3 justify-content-center text-mediumaquamarine">        
+      <span class="bg-white line mt-3"></span><span class="h5">My Creative Team</span><span class="bg-white line mt-3"></span>
+    </div>
+
+    <div class="d-flex gap-5 justify-content-center flex-wrap py-5">
+      <div class="card text-white " style="width: 18rem; height: 26rem; background-color: black;">
+        <img src="https://www.jobz.pk/images/pics/2021-09/592183_1_20469.jpg" style="border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;">
+        <div  class=" rounded border text-center py-2 mx-3 bg-transparent" style=" 
+        position: absolute;
+        top: 140px;
+        z-index: 900;
+
+        ">
+        <h3 class="card-title text-mediumaquamarine bg-dark"><b> M..Kashif </b></h3>
+        <p class="card-text py-2 bg-dark">Muhammad Kashif is a Professional Mern Stack Dev with 5+ Years Experience.</p>
+        <a href="https://kashifx6.github.io/portfolio/" class="btn bg-mediumaquamarine">Portfolio</a>
+      </div>
+
+      <div class="w-100 m-0 h5 d-flex  justify-content-center position-absolute bottom-0 bg-mediumaquamarine">
+        <a href="https://snipbyte.com">
+          <i class="py-2 me-3 fa-brands fa-facebook " style="color:  #3b5998;"></i></a>
+          <a href="https://snipbyte.com">
+           <i class="py-2 me-3  fa-brands fa-instagram text-danger" ></i></a>
+           <a href=" https://snipbyte.com">
+             <i class="py-2 me-3  fa-brands fa-twitter" style="color: #55acee;"></i>
+           </a>
+           
+         </div>
+       </div>
+       <div class="card text-white " style="width: 18rem; height: 25rem; background-color: black; transform: scale(1.08);
+       box-shadow: mediumaquamarine 10px 3px 8px;">
+       <img src="https://scontent.fisb10-1.fna.fbcdn.net/v/t39.30808-6/294082912_1296561464484863_3942525496952141427_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cE_yPXkyAQUAX-rd7XC&_nc_ht=scontent.fisb10-1.fna&oh=00_AfCzRUAG6oLbo-ibzcJFg0iQUwqiiSjQcMwr047QwHWAIg&oe=65403B23" style="border-bottom-left-radius: 50px;border-bottom-right-radius: 50px;">
+       <div  class=" rounded border text-center py-2 mx-3 bg-transparent" style=" 
+       position: absolute;
+       top: 140px;
+       z-index: 900;
+
+       ">
+       <h3 class="card-title text-mediumaquamarine bg-dark"><b>Yasir Masood</b></h3>
+       <p class="card-text py-2 bg-dark">Yasir Masood is a Professional Web Developer with 3+ years Experience.</p>
+       <a href="#contact" class="btn bg-mediumaquamarine">Contact Me</a>
+     </div>
+
+     <div class=" w-100 m-0 h5 d-flex  justify-content-center position-absolute bottom-0 bg-mediumaquamarine">
+      <a href="https://www.facebook.com/yasir.doll.50702769">
+        <i class="py-2 me-3 fa-brands fa-facebook " style="color:  #3b5998;"></i></a>
+        <a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+         <i class="py-2 me-3  fa-brands fa-instagram text-danger" ></i></a>
+         <a href=" https://snipbyte.com">
+           <i class="py-2 me-3  fa-brands fa-twitter" style="color: #55acee;"></i>
+         </a>
+         <a href="https://wa.me/+923065778113">
+           <i class="py-2 fa-brands fa-whatsapp" style="color: #43d854;"></i></a>
+         </div>
+       </div>
+       <div class="card text-white " style="width: 18rem; height: 26rem; background-color: black;">
+        <img src="https://img.freepik.com/free-photo/portrait-sexy-blonde-girl-fleece-shirt-posing-studio-isolated-dark-background_613910-19421.jpg?w=740&t=st=1698383167~exp=1698383767~hmac=f1391f9ca96026f8087578cf6fd07fab0df2979ff6e30ec38ba43422814f0cbc" style="border-bottom-left-radius: 50px;border-bottom-right-radius: 50px; max-height: 280px;">
+        <div  class=" rounded border text-center py-2 mx-3 bg-transparent" style=" 
+        position: absolute;
+        top: 140px;
+        z-index: 900;
+
+        ">
+
+        <h3 class="card-title text-mediumaquamarine bg-dark"><b> Alisha J.. </b></h3>
+        <p class="card-text py-2 bg-dark">Alisha Jamshaid is a Professional Content Writer with 2+ Years expertise</p>
+        <a href="#" class="btn bg-mediumaquamarine">Portfolio</a>
+      </div>
+
+      <div class=" w-100 m-0 h5 d-flex  justify-content-center position-absolute bottom-0 bg-mediumaquamarine">
+        <a href="https://snipbyte.com">
+          <i class="py-2 me-3 fa-brands fa-facebook " style="color:  #3b5998;"></i></a>
+          <a href="https://snipbyte.com">
+           <i class="py-2 me-3  fa-brands fa-instagram text-danger" ></i></a>
+           <a href=" https://snipbyte.com">
+             <i class="py-2 me-3  fa-brands fa-twitter" style="color: #55acee;"></i>
+           </a>
+         </div>
+       </div>
+
+     </div>
+
+   </section>
+   <!-- My Team  -->
+   <!-- Contact Section Starts -->
+   <section class="contact-section bg-dark  w-100
+   " id="contact">
+   <div class="d-flex py-5 gap-3 justify-content-center text-mediumaquamarine">        
+    <span class="bg-white line mt-3"></span><span class="h5">Contact Us</span><span class="bg-white line mt-3"></span>
+  </div>
+
+  <div class="d-md-none">
+    <h3 class="w-100 text-center text-white">
+      Feel Free to Contact Me
+    </h3>
+    <div class="text-center  py-3 d-flex align-items-center gap-4 w-100 justify-content-center rounded-start h-100">
+     <span class="bg-mediumaquamarine rounded mx-5" style="height:70px;width:5px;" data-aos = "fade-up"></span>
+     <a href="https://wa.me/+923065778113">
+      <i class="py-2 h5 me-md-0 fa-brands fa-whatsapp text-white"></i></a><a href="https://www.facebook.com/yasir.doll.50702769">
+       <i class="py-2 h5 me-md-0 fa-brands fa-facebook text-white"></i></a>
+       <a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+         <i class="py-2 h5 me-md-0 fa-brands fa-instagram text-white"></i></a>
+         <span class="bg-mediumaquamarine rounded mx-5" style="height:70px;width:5px;" data-aos = "fade-up"></span>
+       </div>
+     </div>
+     <div class="d-none d-md-block">
+      <h1 class="w-100 text-center text-white">
+        Feel Free to Contact Me
+      </h1>
+      <div class="text-center py-3 d-flex align-items-center gap-5 rounded-start h-100">
+       <span class="bg-mediumaquamarine mx-auto rounded mb-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
+       <a href="https://snipbyte.com">
+         <i class="py-2 me-3 h5 me-md-0 fa-brands fa-facebook text-white"></i></a><a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+           <i class="py-2 me-3 h5 me-md-0 fa-brands fa-instagram text-white"></i></a><a href=" https://snipbyte.com">
+             <i class="py-2 me-3 h5 me-md-0 fa-brands fa-twitter text-white"></i>
+           </a><a href=" https://snipbyte.com">
+             <i class="py-2 me-3 h5 me-md-0 fa-brands fa-google-plus text-white"></i></a><a href=" https://snipbyte.com">
+               <i class="py-2 h5 fa-brands fa-linkedin text-white"></i></a>
+               <span class="bg-mediumaquamarine mx-auto rounded mt-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
+             </div>
+           </div>
+           <div>
+            <div class="d-flex flex-wrap gap-5 py-5 justify-content-center text-white">
+              <div>
+                <i class="fa-solid fa-phone me-2 text-mediumaquamarine" style="font-size: 32px;"></i>
+                <span>+923065778113</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope me-2 text-mediumaquamarine" style="font-size: 32px;"></i> 
+                <span>yasirkh261@gmail.com</span>
+              </div>
+              <div>
+                <i class="fa-solid fa-location-dot me-2 text-mediumaquamarine" style="font-size: 32px;"></i> 
+                <span>Fateh Jang, Islamabad</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- Contact Section Ends -->
+        <footer> 
+          <div class="p-4 text-center text-secondary">
+            &#169; YASIRMASOOD 2023 | All Rights Reserved
+
+
+          </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      </body>
+      </html>
+      <script type="text/javascript">
+        $(document).ready(function()
+        {
+          var typed = new Typed(".heading-typing", {
+            strings: ["Masood"],
+            typeSpeed: 200,
+            loop: false
+          });
+          $(".typed-cursor").hide();  
+        })
+
+// Active Navbar starts
+
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".nav-link");
+        window.onscroll = () => {
+          var current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 60) {
+              current = section.getAttribute("id"); }
+            });
+
+          navLi.forEach((a) => {
+            a.classList.remove("current");
+            if (a.classList.contains(current)) {
+              a.classList.add("current");
+            }
+          });
+        };
+
+// Active Navbar ends
+
+// Animations using Gsap
+        const tl1  = gsap.timeline();
+        let home = document.querySelector(".home-heading");
+        let homePara = document.querySelector(".home-para");
+
+        tl1.from(
+
+          home,
+          {
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            ease: "power2.inOut",
+          })
+        .from(homePara, {
+          opacity: 0,
+          x: 50,
+          duration: 0.3,
+          ease: "bounce.out",
+        });
+
+
+  // Register the ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+  // Create a timeline
+        const tl6 = gsap.timeline({
+          scrollTrigger: {
+      trigger: ".animation-section", // Replace with the actual trigger element or selector
+      start: "top center", // When the top of the trigger element is at the center of the viewport
+      end: "bottom center", // When the bottom of the trigger element is at the center of the viewport
+      markers: false, // Add markers for debugging (remove this in production)
+      toggleActions: "play none none reverse", // Define how the animation behaves
+    },
+  });
+
+        const about_heading = document.querySelector(
+          ".about-heading"
+          );
+        const about_para = document.querySelector(".about_para");
+        const about_Image = document.querySelector(".about_Image");
+        const about_btn = document.querySelector(".about_btn");
+
+  // Define your animations within the timeline
+        tl6
+        .from(about_heading, {
+          opacity: 0,
+          y: 20,
+          duration: 0.5,
+          ease:"power2.inOut",
+        })
+
+        .from(about_para, {
+          opacity: 0,
+          duration: 0.4,
+          x: 50,
+          ease: "bounce.out",
+        })
+        .from(about_Image, {
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          ease: "circ.Out",
+        })
+        .from(about_btn, {
+          opacity: 0,
+          y: 50,
+          duration: 0.2,
+          ease: "power2.inOut",
+        });
+
+
+
+        const tl7 = gsap.timeline({
+          scrollTrigger: {
+      trigger: ".exp-section", // Replace with the actual trigger element or selector
+      start: "top center", // When the top of the trigger element is at the center of the viewport
+      end: "bottom center", // When the bottom of the trigger element is at the center of the viewport
+      markers: false, // Add markers for debugging (remove this in production)
+      toggleActions: "play none none reverse", // Define how the animation behaves
+    },
+  });
+
+        const exp_heading = document.querySelector(
+          ".exp_heading"
+          );
+        const exp_para = document.querySelector(".exp_para");
+        const exp_para1 = document.querySelector(".exp_para1");
+        const exp_para2 = document.querySelector(".exp_para2");
+        const exp_para3 = document.querySelector(".exp_para3");
+
+
+  // Define your animations within the timeline
+        tl7
+        .from(exp_heading, {
+          opacity: 0,
+          y: 10,
+          duration: 0.3,
+          ease:"circ.Out",
+        })
+
+        .from(exp_para, {
+          opacity: 0,
+          duration: 0.3,
+          x: 50,
+          ease: "circ.Out",
+        })
+        .from(exp_para1, {
+          opacity: 0,
+          y: 50,
+          duration: 0.3,
+          ease: "circ.Out",
+        })
+        .from(exp_para2, {
+          opacity: 0,
+          y: 50,
+          duration: 0.3,
+          ease: "circ.Out",
+        })
+        .from(exp_para3, {
+          opacity: 0,
+          y: 50,
+          duration: 0.3,
+          ease: "circ.Out",
+        });
+      </script>
