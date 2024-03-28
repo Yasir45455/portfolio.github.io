@@ -1,574 +1,682 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale=1.0, user-scalable=no" />  -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <link rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
   <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
   <!-- for animations  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  
+
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <title>Yasir Masood</title>
 </head>
 
 
 <style type="text/css">
-  body 
-  {
-    font-family: 'Poppins';
-    background-color: rgba(255,255,255,255);
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 255);
   }
-  #home-img
-  {
+
+  #home-img {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
+
   img:hover {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
 
-  p 
-  {
+  p {
     opacity: 0.7;
 
 
   }
-  .bg-gradient
-  {
-    background: -webkit-linear-gradient(to right,#6e49f5, #f158c0);
+
+  .bg-gradient {
+    background: -webkit-linear-gradient(to right, #6e49f5, #f158c0);
 
 
 
   }
-  .text-gradient
-  {
+
+  .text-gradient {
     background: -webkit-linear-gradient(#6e49f5, #f158c0);
-     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
   }
-  .border-gradient
-  {
+
+  .border-gradient {
     background: transparent;
-  background-image: linear-gradient(90deg, white, white),
-    linear-gradient(90deg, #6e49f5, #f158c0);
-  background-clip: padding-box, border-box;
-  background-origin: border-box;
-  border: 2px solid transparent;
-  border-radius: 5px;
+    background-image: linear-gradient(90deg, white, white),
+      linear-gradient(90deg, #6e49f5, #f158c0);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
   }
-  i:hover
-  {
+
+  i:hover {
     background: -webkit-linear-gradient(#6e49f5, #f158c0);
-     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 
 
   }
-  .fa-whatsapp:hover,.contact-us:hover,.logo:hover
-  {
+
+  .fa-whatsapp:hover,
+  .contact-us:hover,
+  .logo:hover {
     color: white !important;
   }
-  .nav,.social,nav,.nav-2
-  {
+
+  .nav,
+  .social,
+  nav,
+  .nav-2 {
     z-index: 999;
   }
-  .navbar
-  {
+
+  .navbar {
     z-index: 999;
     margin: auto !important;
   }
-  .bg-mediumaquamarine
-  {
+
+  .bg-mediumaquamarine {
     /* background: -webkit-gradient(linear,to right,#6e49f5, #f158c0); */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#6e49f5), color-stop(100%,#f158c0));
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #6e49f5), color-stop(100%, #f158c0));
 
   }
-  .border-mediumaquamarine
-  {
+
+  .border-mediumaquamarine {
     border: none;
-    border-bottom:10px solid aquamarine; 
+    border-bottom: 10px solid aquamarine;
   }
 
-  .border-mediumaquamarine-contact
-  {
-    border:10px solid aquamarine;  
+  .border-mediumaquamarine-contact {
+    border: 10px solid aquamarine;
   }
-  .text-mediumaquamarine
-  {
+
+  .text-mediumaquamarine {
     color: aquamarine;
   }
-  .custom-border
-  {
+
+  .custom-border {
     border: 2px solid aquamarine;
   }
+
   a[title] {
-    color:red !important;
+    color: red !important;
   }
-  .home-img-fancy-border
-  {
+
+  .home-img-fancy-border {
     border: 35px solid;
-    border-image:linear-gradient(to top, mediumaquamarine 45%, mediumaquamarine 35%, mediumaquamarine 40%,#343a40 50%, #343a40 75%, #343a40 75%) 5;
+    border-image: linear-gradient(to top, mediumaquamarine 45%, mediumaquamarine 35%, mediumaquamarine 40%, #343a40 50%, #343a40 75%, #343a40 75%) 5;
   }
+
   .fancy-border {
 
     margin-top: -40px;
     border: 30px solid;
-    border-image:linear-gradient(to top, mediumaquamarine 25%, mediumaquamarine 25%, mediumaquamarine 50%,#212529 50%, #212529 75%, #212529 75%) 5;
+    border-image: linear-gradient(to top, mediumaquamarine 25%, mediumaquamarine 25%, mediumaquamarine 50%, #212529 50%, #212529 75%, #212529 75%) 5;
   }
-.about-content
-{
-  background-color: rgba(245,247,253,255) !important;
-  border-radius: 30px;
-}
-  .about-img-fancy-border
-  {
+
+  .about-content {
+    background-color: rgba(245, 247, 253, 255) !important;
+    border-radius: 30px;
+  }
+
+  .about-img-fancy-border {
     border: 35px solid;
-    border-image:linear-gradient(to left, mediumaquamarine 25%, mediumaquamarine 25%, mediumaquamarine 50%,#212529 50%, #212529 75%, #212529 75%) 5
-  }
-  .line 
-  {
-   height: 3px;
-   flex: 1;
-   max-width: 100px !important;
- }
- .fa-globe, .fa-book, .fa-laptop
- {
-  font-size: 100px !important;
-}
-
-.skills {
-  text-align: right;
-  color: white;
-  height: 6px;
-  box-shadow: 0 0 10px aquamarine;
-
-}
-.html {
-  width: 90%;
-  animation: html 4s;
-}
-
-@keyframes vertical {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 0;
-    -webkit-transform: rotateX(-180deg);
-    transform: rotateX(-180deg);
-  }
-  10% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  36% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
-  }
-  43% {
-    opacity: 0;
-    -webkit-transform: translateY(-90px);
-    transform: translateY(-90px);
-  }
-  78% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
-.verticalflip {
-  font-size: 300%;
-  font-weight: bold;
-  border: none;
-  padding: 3px;
-}
-.verticalflip span {
-  animation: vertical 7.5s linear infinite 0s;
-  -ms-animation: vertical 7.5s linear infinite 0s;
-  -webkit-animation: vertical 7.5s linear infinite 0s;
-  color: mediumaquamarine;
-  position: absolute;
-  opacity: 0;
-  padding: 3px;
-  
-}
-.verticalflip span:nth-child(2) {
-  -ms-animation-delay: 2.5s;
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-}
-.verticalflip span:nth-child(3) {
-  -ms-animation-delay: 5s;
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
-}
-/*Home text Animations*/
-.cardd
-{
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
-}
-.edu-card{
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
-}
-.cardd:hover
-{
-  transform: scale(1.05);
-  box-shadow: #f158c0 10px 3px 8px;
-}
-
-.cardd  img
-{
-  max-height: 150px;
-  min-height: 150px;
-}
-.cardd .card-body h6
-{
-  min-height: 30px;
-  color: #222222;
-}
-.cardd .card-body p
-{
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #222222;
-}
-
-
-@keyframes html{ /*animate html skills*/
-  0%{
-    width: 0%;
+    border-image: linear-gradient(to left, mediumaquamarine 25%, mediumaquamarine 25%, mediumaquamarine 50%, #212529 50%, #212529 75%, #212529 75%) 5
   }
 
-  100%{
+  .line {
+    height: 3px;
+    flex: 1;
+    max-width: 100px !important;
+  }
+
+  .fa-globe,
+  .fa-book,
+  .fa-laptop {
+    font-size: 100px !important;
+  }
+
+  .skills {
+    text-align: right;
+    color: white;
+    height: 6px;
+    box-shadow: 0 0 10px aquamarine;
+
+  }
+
+  .html {
     width: 90%;
-  }
-}
-.css {width: 80%;
-  animation: css 3s;
-}
-@keyframes css{ /*animate html skills*/
-  0%{
-    width: 0%;
+    animation: html 4s;
   }
 
-  100%{
-    width: 80%;
-  }
-}
-.php {width: 60%;
-  animation: php 2s;
-}
-@keyframes php{ /*animate html skills*/
-  0%{
-    width: 0%;
-  }
+  @keyframes vertical {
+    0% {
+      opacity: 0;
+    }
 
-  100%{
-    width: 60%;
-  }
-}
+    5% {
+      opacity: 0;
+      -webkit-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+    }
 
-.subscribe-section
-{
-  background-image: url("https://img.freepik.com/free-photo/high-angle-desktop-with-laptop-copy-space_23-2148430882.jpg?w=826&t=st=1696051884~exp=1696052484~hmac=3766a381456f9ac8fa8ed4079d98088749aec9bedf5eeed137261b3c24ddcbe1");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-.edu-card 
-{
-  max-width: 40%;
-}
+    10% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
 
-/*  */
-.container {
-  position: relative;
-  width: 600px;
-  height: 300px;
-}
+    36% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
 
-.image {
-  display: block;
-  height: 100%;
-}
+    43% {
+      opacity: 0;
+      -webkit-transform: translateY(-90px);
+      transform: translateY(-90px);
+    }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: rgb(0, 0, 0,0.6);
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: mediumaquamarine 10px 3px 8px;
-}
-.container:hover .overlay {
-  opacity: 1;
-}
+    78% {
+      opacity: 0;
+    }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-/*Home Image Border Shake Animations */
-button:hover,i:hover,a:hover
-{
-  animation: vertical-shaking 5s infinite;
-}
-.current
-{
-  animation: vertical-shaking 5s infinite;
-  background: -webkit-linear-gradient(#6e49f5, #f158c0);
-     -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.navbar-whatsapp,.about-imgg
-{
-  animation: horizontal-shaking 1s infinite;
-}
-.horizontal-shake {
-  animation: horizontal-shaking 3s infinite;
-}
-@keyframes horizontal-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateX(5px) }
-  50% { transform: translateX(-5px) }
-  75% { transform: translateX(5px) }
-  100% { transform: translateX(0) }
-}
-
-.vertical-shake {
-  animation: vertical-shaking 2s infinite;
-}
-
-@keyframes vertical-shaking {
-  0% { transform: translateY(0) }
-  25% { transform: translateY(5px) }
-  50% { transform: translateY(-5px) }
-  75% { transform: translateY(5px) }
-  100% { transform: translateY(0) }
-}
-/*Home Image Border Shake Animations */
-
-/*Download Cv button background animation */
-
-
-@keyframes particles {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 500% 0;
-  }
-}
-.particle-background {
-  background: linear-gradient(90deg, mediumaquamarine, black, mediumaquamarine);
-  background-size: 500% 100%;
-  animation: particles 10s linear infinite;
-}
-
-
-/*Animated Profession on Home page*/
-.animation {
-  height:50px;
-  overflow:hidden;
-  margin-left: 1rem;
-  font-size: 30px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.animation > div > div {
-  padding: 0.25rem 0.75rem;
-  height:2.81rem;
-
-  margin-bottom: 2.81rem;
-  display:inline-block;
-}
-
-.animation div:first-child {
-  animation: text-animation 8s infinite;
-}
-@keyframes text-animation {
-  0% {
-    margin-top: 0;
-  }
-  10% {
-    margin-top: 0;
-  }
-  20%
-  {
-    margin-top: -5.62rem;
-  }
-  30% {
-    margin-top: -5.62rem;
-  }
-  40% {
-    margin-top: -11.24rem;
-  }
-  60% 
-  {
-    margin-top: -11.24rem;
-  }
-  70%
-  {
-    margin-top: -5.62rem;
-  }
-  80% 
-  {
-    margin-top: -5.62rem;
-  }
-  90% {
-    margin-top: 0;
-  }
-  100% 
-  {
-    margin-top: 0;
-  }
-}
-/*About Us Page Crousel Animations*/
-.carousel-indicators {
-  position: unset;
-  flex-direction: column;
-  width: 100%;
-  margin: 0;
-  padding: 1em;
-  color: white !important;
-}
-.carousel-indicators .about {
-  text-indent: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  color: white;
-  background-color: transparent;
-  border-top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.carousel-indicators .about .active {
-  color: aquamarine;
-}
-.carousel {
-  background-color: beige;
-}
-.carousel-inner img {
-  max-height: 400px;
-  max-width: 100%;
-  padding: 1em;
-  margin: auto;
-}
-/*Contact Us*/
-input, textarea
-{
-  outline: none;
-  color: white;
-}
-input::placeholder,textarea::placeholder {
- color: white !important;
- opacity: 0.7;
-}
-marquee h1
-{
-  font-size: 100px;
-  -webkit-text-stroke-width: 10px;
-
-  -webkit-text-stroke: 1px rgba(0,0,0,0.6);
-
-  color:transparent;
-}
-/*Some Media Queries*/
-@media screen and (min-width: 576px) {
-  .carousel {
-    padding: 2em;
-    font-size: 1.3em;
+    100% {
+      opacity: 0;
+    }
   }
 
-}
-@media screen and (min-width: 720px) {
 
-  .nav-2
-  {
-    position: fixed;
-  }
-}
-@media screen and (max-width: 720px) {
-  body
-  {
-    overflow: scroll;
-  }
-  .navbar
-  {
-    width: 90% !important;
-  }
   .verticalflip {
-    font-size: 150%;
+    font-size: 300%;
+    font-weight: bold;
+    border: none;
+    padding: 3px;
   }
-  .first,.second,.third
-  {
-    width: 100% !important;
+
+  .verticalflip span {
+    animation: vertical 7.5s linear infinite 0s;
+    -ms-animation: vertical 7.5s linear infinite 0s;
+    -webkit-animation: vertical 7.5s linear infinite 0s;
+    color: mediumaquamarine;
+    position: absolute;
+    opacity: 0;
+    padding: 3px;
+
   }
-  .edu-card 
-{
-  min-width: 100%;
-}
-.edu-card p
-{
-  width: 100%;
-}
-}
+
+  .verticalflip span:nth-child(2) {
+    -ms-animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+
+  .verticalflip span:nth-child(3) {
+    -ms-animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+  }
+
+  /*Home text Animations*/
+  .cardd {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  }
+
+  .edu-card {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px !important;
+  }
+
+  .cardd:hover {
+    transform: scale(1.05);
+    box-shadow: #f158c0 10px 3px 8px;
+  }
+
+  .cardd img {
+    max-height: 150px;
+    min-height: 150px;
+  }
+
+  .cardd .card-body h6 {
+    min-height: 30px;
+    color: #222222;
+  }
+
+  .cardd .card-body p {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+  }
+
+
+  @keyframes html {
+
+    /*animate html skills*/
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 90%;
+    }
+  }
+
+  .css {
+    width: 80%;
+    animation: css 3s;
+  }
+
+  @keyframes css {
+
+    /*animate html skills*/
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 80%;
+    }
+  }
+
+  .php {
+    width: 60%;
+    animation: php 2s;
+  }
+
+  @keyframes php {
+
+    /*animate html skills*/
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 60%;
+    }
+  }
+
+  .subscribe-section {
+    background-image: url("https://img.freepik.com/free-photo/high-angle-desktop-with-laptop-copy-space_23-2148430882.jpg?w=826&t=st=1696051884~exp=1696052484~hmac=3766a381456f9ac8fa8ed4079d98088749aec9bedf5eeed137261b3c24ddcbe1");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .edu-card {
+    max-width: 40%;
+  }
+
+  /*  */
+  .container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+  }
+
+  .image {
+    display: block;
+    height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: mediumaquamarine 10px 3px 8px;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /*Home Image Border Shake Animations */
+  button:hover,
+  i:hover,
+  a:hover {
+    animation: vertical-shaking 5s infinite;
+  }
+
+  .current {
+    animation: vertical-shaking 5s infinite;
+    background: -webkit-linear-gradient(#6e49f5, #f158c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white;
+    background: transparent;
+    background-image: linear-gradient(90deg, transparent, transparent),
+      linear-gradient(90deg, #6e49f5, #f158c0);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+  }
+
+  .navbar-whatsapp,
+  .about-imgg {
+    animation: horizontal-shaking 1s infinite;
+  }
+
+  .horizontal-shake {
+    animation: horizontal-shaking 3s infinite;
+  }
+
+  @keyframes horizontal-shaking {
+    0% {
+      transform: translateX(0)
+    }
+
+    25% {
+      transform: translateX(5px)
+    }
+
+    50% {
+      transform: translateX(-5px)
+    }
+
+    75% {
+      transform: translateX(5px)
+    }
+
+    100% {
+      transform: translateX(0)
+    }
+  }
+
+  .vertical-shake {
+    animation: vertical-shaking 2s infinite;
+  }
+
+  @keyframes vertical-shaking {
+    0% {
+      transform: translateY(0)
+    }
+
+    25% {
+      transform: translateY(5px)
+    }
+
+    50% {
+      transform: translateY(-5px)
+    }
+
+    75% {
+      transform: translateY(5px)
+    }
+
+    100% {
+      transform: translateY(0)
+    }
+  }
+
+  /*Home Image Border Shake Animations */
+
+  /*Download Cv button background animation */
+
+
+  @keyframes particles {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 500% 0;
+    }
+  }
+
+  .particle-background {
+    background: linear-gradient(90deg, mediumaquamarine, black, mediumaquamarine);
+    background-size: 500% 100%;
+    animation: particles 10s linear infinite;
+  }
+
+
+  /*Animated Profession on Home page*/
+  .animation {
+    height: 50px;
+    overflow: hidden;
+    margin-left: 1rem;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .animation>div>div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+
+    margin-bottom: 2.81rem;
+    display: inline-block;
+  }
+
+  .animation div:first-child {
+    animation: text-animation 8s infinite;
+  }
+
+  @keyframes text-animation {
+    0% {
+      margin-top: 0;
+    }
+
+    10% {
+      margin-top: 0;
+    }
+
+    20% {
+      margin-top: -5.62rem;
+    }
+
+    30% {
+      margin-top: -5.62rem;
+    }
+
+    40% {
+      margin-top: -11.24rem;
+    }
+
+    60% {
+      margin-top: -11.24rem;
+    }
+
+    70% {
+      margin-top: -5.62rem;
+    }
+
+    80% {
+      margin-top: -5.62rem;
+    }
+
+    90% {
+      margin-top: 0;
+    }
+
+    100% {
+      margin-top: 0;
+    }
+  }
+
+  /*About Us Page Crousel Animations*/
+  .carousel-indicators {
+    position: unset;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    color: white !important;
+  }
+
+  .carousel-indicators .about {
+    text-indent: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    color: white;
+    background-color: transparent;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .carousel-indicators .about .active {
+    color: aquamarine;
+  }
+
+  .carousel {
+    background-color: beige;
+  }
+
+  .carousel-inner img {
+    max-height: 400px;
+    max-width: 100%;
+    padding: 1em;
+    margin: auto;
+  }
+
+  /*Contact Us*/
+  input,
+  textarea {
+    outline: none;
+    color: white;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: white !important;
+    opacity: 0.7;
+  }
+
+  marquee h1 {
+    font-size: 100px;
+    -webkit-text-stroke-width: 10px;
+
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+
+    color: transparent;
+  }
+
+  /*Some Media Queries*/
+  @media screen and (min-width: 576px) {
+    .carousel {
+      padding: 2em;
+      font-size: 1.3em;
+    }
+
+  }
+
+  @media screen and (min-width: 720px) {
+
+    .nav-2 {
+      position: fixed;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    body {
+      overflow: scroll;
+    }
+
+    .navbar {
+      width: 90% !important;
+    }
+
+    .verticalflip {
+      font-size: 150%;
+    }
+
+    .first,
+    .second,
+    .third {
+      width: 100% !important;
+    }
+
+    .edu-card {
+      min-width: 100%;
+    }
+
+    .edu-card p {
+      width: 100%;
+    }
+
+    #home {
+      background: black !important;
+    }
+  }
+
+  .navbar-nav a {
+    margin: 0 3px;
+    width: 80px;
+    text-align: center;
+  }
 </style>
+
 <body>
   <!-- Navbar Starts -->
 
   <div class="nav-2 w-100 ">
 
-    <nav class="p-0 navbar navbar-expand-lg navbar-dark text-start" style="background-color:#082f49">
+    <nav class="p-0 navbar navbar-expand-lg navbar-dark text-start" style="background-color:#1e1b4b">
 
       <div class="container-fluid p-0 ">
         <div class="bg-mediumaquamarine p-md-4 p-2 m-0">
           <span class="navbar-brand text-dark logo" href="#home"><b>Yasir Masood</b></span>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
@@ -577,23 +685,26 @@ marquee h1
             <a class="nav-link text-white about" href="#about"><b>About</b></a>
             <a class="nav-link text-white skillss" href="#skillss"><b>Skills</b></a>
             <a class="nav-link text-white portfolio" href="#portfolio"><b>Portfolio</b></a>
-            <a class="nav-link text-white team" href="#team"><b>Contact</b></a>
-            
+            <a class="nav-link text-white team" href="#contact"><b>Contact</b></a>
+
           </div>
         </div>
       </div>
-      
-</nav>
-</div>
 
-<!-- Navbar Ends -->
-<div id="home" class="row w-100 p-0 m-0 bg-light">
-  <div class="nav  h-100 justify-content-center align-items-md-center col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 position-fixed">
-    <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 h3  text-white position-fixed navbarr rounded-top d-none d-md-block" style="background-color:rgb(0, 0, 0,0.6);">
-      <div class="w-100  m-0 p-2 text-center rounded-end">
-        <b>
-          <a href="https://wa.me/+923065778113">
-            <i class="navbar-whatsapp fa-brands fa-whatsapp text-white h1"></i></b>
+    </nav>
+  </div>
+
+  <!-- Navbar Ends -->
+  <div id="home" class="row w-100 vh-100 p-0 m-0" style="background-color: #1e1b4b;">
+    <div
+      class="nav  h-100 justify-content-center align-items-md-center col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 position-fixed">
+      <div
+        class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 h3  text-white position-fixed navbarr rounded-top d-none d-md-block"
+        style="background-color:rgb(0, 0, 0,0.6);">
+        <div class="w-100  m-0 p-2 text-center rounded-end">
+          <b>
+            <a href="https://wa.me/+923065778113">
+              <i class="navbar-whatsapp fa-brands fa-whatsapp text-white h1"></i></b>
           </a>
         </div>
       </div>
@@ -602,30 +713,36 @@ marquee h1
     </div>
     <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 d-none d-md-block">
     </div>
-    <div class="home-content text-start text-white p-5 col-12 col-md-8 col-sm-8 col-xl-8 col-lg-6 mt-md-4">
+    <div
+      class="home-content  text-start text-white p-5 col-12 col-md-8 col-sm-8 col-xl-8 col-lg-6 mt-md-4 d-flex justify-content-center align-items-center flex-column">
       <h2 class="m-0 py-2 "></h2>
-      <h1 class="display-1 p-0 m-0 py-2 pt-md-5 " style=" font-weight: 900;font-family:sans-serif;color: #222222;">Yasir <span class="heading-typing"></span></h1>
-      <div class="verticalflip">
+      <h1 class="display-1 p-0 m-0 py-2 pt-md-5 text-center" style=" font-weight: 800;color: #fff;">I'M Yasir <span
+          class="heading-typing"></span></h1>
+      <div class="verticalflip w-100 justify-content-center d-flex align-items-center">
         &nbsp;
-        <span class="text-gradient">Full Stack Dev</span>
+        <span class="text-gradient">Full Stack Developer</span>
         <span class="text-gradient">ReactJs Developer</span>
-        <span class="text-gradient">Wordpress Dev</span>
+        <span class="text-gradient">Wordpress Developer</span>
       </div>
-      <p class=" d-block d-md-none py-4 text-secondary" > To secure a web dev position in a reputable organization to utilize my skills while making a significant role in the success of organization</p>
-      <p class=" d-none d-md-block py-4 home-para text-secondary">To work and improve my skills as a web dev and find efficient and sustainable solutions to improve internet and online web space for everyone...<br>
-      To secure a web dev position in a reputable organization to utilize my skills while making a significant role in the success of organization.</p>
+      <p class=" d-block d-md-none py-4 text-white text-center"> To secure a web dev position in a reputable
+        organization to utilize my skills while making a significant role in the success of organization</p>
+      <p class=" d-none d-md-block py-4 home-para text-white text-center">To work and improve my skills as a web dev and
+        find efficient and sustainable solutions to improve internet and online web space for everyone...<br><br>
+        To secure a web dev position in a reputable organization to utilize my skills while making a significant role in
+        the success of organization.</p>
       <div class="d-flex gap-3 flex-wrap">
         <div>
           <a href="#portfolio">
-          <button class="w-100 btn btn-lg p-3 text-dark  border-gradient" style="min-width: 200px !important;">My Work</button>
-        </a>
+            <button class="w-100 btn btn-lg p-3 text-gradient border" style="min-width: 200px !important;">My
+              Work</button>
+          </a>
         </div>
         <div>
           <a href="#skillss">
-          <button class="w-100 btn btn-lg text-white p-3" style="min-width: 200px !important;
+            <button class="w-100 btn btn-lg text-white p-3" style="min-width: 200px !important;
           background: linear-gradient(to right, #6e49f5, #f158c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
           ">My Experience<i class="ms-3 fa-solid fa-arrow-down"></i> </button>
- </a>
+          </a>
         </div>
       </div>
       <!-- <button class="btn text-white w-25 d-none d-md-inline particle-background" >Download CV</button> -->
@@ -636,519 +753,602 @@ marquee h1
       <div class="home-img-fancy-border p-2 bg-dark rounded-3 horizontal-shake">
         <img src"https://drive.google.com/uc?id=1lEiY7SQQZ_YgPq3pr8b_hhmwZi4rx-So" class="img-fluid h-100 rounded-3">
       </div> -->
-      <!-- <img class="h-100 w-100 d-md-none" src="https://img.freepik.com/free-photo/woman-with-tablet-looking-camera_23-2147762332.jpg"> -->
+    <!-- <img class="h-100 w-100 d-md-none" src="https://img.freepik.com/free-photo/woman-with-tablet-looking-camera_23-2147762332.jpg"> -->
     <!-- </div> -->
     <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 d-none d-md-block">
-      <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 position-fixed social h-100" >
-        <div class="text-center py-3 d-md-flex flex-md-column align-items-center justify-content-center rounded-start h-100">
-         <span class="bg-mediumaquamarine mx-auto rounded mb-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
-         <a href="https://www.facebook.com/yasir.doll.50702769">
-           <i class="py-2 me-3 h5 me-md-0 fa-brands fa-facebook text-dark"></i></a>
-           <a href="https://wa.me/+923065778113">
-             <i class="py-2 me-3 h5 me-md-0 fa-brands fa-whatsapp text-dark"></i>
-            </a>
-             <a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
-               <i class="py-2 me-3 h5 me-md-0 fa-brands fa-instagram text-dark"></i>
-             </a><a href=" https://snipbyte.com">
-               <i class="py-2 me-3 h5 me-md-0 fa-brands fa-google-plus text-dark"></i></a>
-               <a href="https://www.linkedin.com/in/yasir-masood-bbb873240/">
-                 <i class="py-2 h5 fa-brands fa-linkedin text-dark"></i></a>
-                 <span class="bg-mediumaquamarine mx-auto rounded mt-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
-               </div>
-             </div>
-           </div>
-         </div>
-         <!-- About Section Starts -->
-    <hr style="height: 2px;">
-
-         <section class="animation-section about-section  w-100 p-md-5
-         " id="about">
-         <div class="d-flex py-5 gap-3 justify-content-center">        
-          <span class="bg-dark line mt-3"></span><span class="h1 text-dark">About Me</span><span class="bg-dark line mt-3"></span>
+      <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1 position-fixed social vh-100">
+        <div
+          class="text-center py-3 d-md-flex flex-md-column align-items-center justify-content-center rounded-start h-100">
+          <span class="bg-mediumaquamarine mx-auto rounded mb-2" style="height:70px;width:5px;"
+            data-aos="fade-up"></span>
+          <a href="https://www.facebook.com/yasir.doll.50702769">
+            <i class="py-2 me-3 h5 me-md-0 fa-brands fa-facebook text-gradient "></i></a>
+          <a href="https://wa.me/+923065778113">
+            <i class="py-2 me-3 h5 me-md-0 fa-brands fa-whatsapp text-gradient "></i>
+          </a>
+          <a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+            <i class="py-2 me-3 h5 me-md-0 fa-brands fa-instagram text-gradient "></i>
+          </a><a href=" https://snipbyte.com">
+            <i class="py-2 me-3 h5 me-md-0 fa-brands fa-google-plus text-gradient "></i></a>
+          <a href="https://www.linkedin.com/in/yasir-masood-bbb873240/">
+            <i class="py-2 h5 fa-brands fa-linkedin text-gradient "></i></a>
+          <span class="bg-mediumaquamarine mx-auto rounded mt-2" style="height:70px;width:5px;"
+            data-aos="fade-up"></span>
         </div>
-        <div class="row py-5 about-content">
-          
-          <div class="col-12 col-sm-5 col-xs-5 col-lg-5 col-md-5 d-none d-md-block">
-            <div class="w-100 h-100 position-relative" style="border:6px solid white;">
-              <img src="https://scontent.fisb23-1.fna.fbcdn.net/v/t39.30808-6/294082912_1296561464484863_3942525496952141427_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9534ce&_nc_ohc=KQKWEYDy0VkAX8VzbBv&_nc_ht=scontent.fisb23-1.fna&oh=00_AfCUKIXTy3_bgdHLjlyIlzy_ZiivxSRM2WsZRP0Jv7Ps7w&oe=65DA7AA3"
-              class="img-fluid rounded-3 h-100 w-100 about-imgg border-gradient">
-            </div>
-
-          </div>
-          <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1">
-
-          </div>
-          <div class="col-12 col-sm-5 col-xs-5 col-lg-5 col-md-5 px-md-0 px-5 about-heading">
-            <span class="display-5 fw-bolder" style="color: #222222;">Turning <span class="text-gradient fw-bolder"> Ideas </span> into <span class="text-gradient fw-bolder px-2 rounded"> Exceptional</span> Designs..
-          </span>
-          <br><br>
-          <div>
-            <h4 style="color: #222222;">I'm Yasir Masood</h4>
-            <p class="text-secondary">My name is Yasir Masood a professional website developer from Rawalpindi Pakistan.I completed my BS degree in computer science in March 2022 from COMSATS University Pakistan.My skills and job details are given in the skills section and also in my CV You can download my CV by just clicking the following Download CV button.</p>
-            <div class="d-flex flex-wrap justify-content-around text-white rounded py-1"  style="background: linear-gradient(to right, #6e49f5, #f158c0);">
-              <div>
-                <ul>
-                  <li><strong>Birthday : </strong><span> 1 Nov 1996</span></li>
-                  <li><strong>Age : </strong><span> 26</span></li>
-                  <li><strong>Status : </strong><span> Engaged</span></li>
-
-                </ul>
-              </div>
-              <div>
-                <ul>
-                  <li><strong>Religion : </strong><span> Muslim</span></li>
-                  <li><strong>Phone : </strong><span> +923065778113</span></li>
-                  <li><strong>Degree : </strong><span> BS(CS)</span></li>
-
-                </ul>
-              </div>
-            </div>
-
-          </div>
-           <!--  <div class="text-md-center py-5">
-             <button class="about_btn btn btn-lg text-dark p-4 p-4 bg-mediumaquamarine" >Download CV<i class="d-none d-md-inline ms-3 fa-solid fa-arrow-down"></i> </button>
-           </div> -->
-         </div>
-
-         <div class="col-12 col-sm-2 col-xs-2 col-lg-2 col-md-2 border-0 border-end border"></div>
-
-       </div>
-       
-     </section>
-     <hr style="height: 2px;">
-    
-    <!-- About Section Ends -->
-    <!-- Skills Section Starts -->
-    <section class="p-md-4" id="skillss">
-     
-    <div class="row ">
-
-    
-    <div id="education" class="col-12 col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center">
-      <div>
-        <h3 class="p-3 ps-md-5 text-center"> 
-
-          Experience</h3>
-
-
-        <div class="d-flex flex-wrap justify-content-center gap-5"> 
-          <div class="edu-card rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0" >
-            <div class="card-body">
-              <div class="d-flex justify-content-between flex-wrap">
-                <p class="text-gradient"><b>Self Employed</b></p>
-                <div>
-                  <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Mar 2022 - Present</span>
-                </div>
-              </div>
-              <h6><b>Web Developer</b></h6>
-              <p class="text-mute">I started Learning HTML in March 2022 and now I am a Full Stack Developer, Specially No one can compete with me in front end development. I have made almost 50+ websites till now from March 2022.</p>
-            </div>
-          </div>
-      <div class="edu-card rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0" >
-        <div class="card-body">
-          <div class="d-flex justify-content-between flex-wrap">
-            <p class="text-gradient"><b>UnitedSol Islamabad</b></p>
-            <div>
-              <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Mar 2022 - Oct 2022</span>
-            </div>
-          </div>
-          <h6><b>Wordpress Developer</b></h6>
-          <p class="text-mute">Development and Improvement of WooCommerce solutions for online consumers with HTML,CSS,JS,Jquery and PHP in Wordpress.</p>
-        </div>
-      </div>
-      <div class="edu-card bg-dark rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0" >
-        <div class="card-body text-dark">
-          <div class="d-flex justify-content-between flex-wrap">
-            <p class="text-gradient"><b>SnipByte Islamabad</b></p>
-            <div>
-              <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Dec 2022 - Dec 2023</span>
-            </div>
-          </div>
-          <h6><b>Full Stack Developer</b></h6>
-          <p class="text-mute">Designing and Development web templates with proficiency in HTML,CSS,Bootstrap,JS,jQuery and PHP.</p>
-        </div>
-      </div>
-      <div class="edu-card bg-dark rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0" >
-        <div class="card-body text-dark">
-          <div class="d-flex justify-content-between flex-wrap">
-            <p class="text-gradient"><b>ODL Islamabad</b></p>
-            <div>
-              <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Jan 2024 - Present</span>
-            </div>
-          </div>
-          <h6><b>ReactJs Developer</b></h6>
-          
-          <p class="text-mute">Development of Websites with proficiency in ReactJS,Bootstrap,TailwindCSS. Learning Mern Stack.</p>
-        </div>
-      </div>
-      </div>
       </div>
     </div>
   </div>
-  <hr>
-  <div class="row ">
+  <!-- About Section Starts -->
+  <hr style="height: 2px;">
+
+  <section class="animation-section about-section  w-100 p-md-5
+         " id="about">
+    <div class="d-flex py-5 gap-3 justify-content-center">
+      <span class="bg-dark line mt-3"></span><span class="h1 text-dark">About Me</span><span
+        class="bg-dark line mt-3"></span>
+    </div>
+    <div class="row py-5 about-content">
+
+      <div class="col-12 col-sm-5 col-xs-5 col-lg-5 col-md-5 d-none d-md-block">
+        <div class="w-100 h-100 position-relative" style="border:6px solid white;">
+          <img
+            src="https://scontent.fisb23-1.fna.fbcdn.net/v/t39.30808-6/294082912_1296561464484863_3942525496952141427_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9534ce&_nc_ohc=KQKWEYDy0VkAX8VzbBv&_nc_ht=scontent.fisb23-1.fna&oh=00_AfCUKIXTy3_bgdHLjlyIlzy_ZiivxSRM2WsZRP0Jv7Ps7w&oe=65DA7AA3"
+            class="img-fluid rounded-3 h-100 w-100 about-imgg border-gradient">
+        </div>
+
+      </div>
+      <div class="col-12 col-md-1 col-sm-1 col-xl-1 col-lg-1">
+
+      </div>
+      <div class="col-12 col-sm-5 col-xs-5 col-lg-5 col-md-5 px-md-0 px-5 about-heading">
+        <span class="display-5 fw-bolder" style="color: #222222;">Turning <span class="text-gradient fw-bolder"> Ideas
+          </span> into <span class="text-gradient fw-bolder px-2 rounded"> Exceptional</span> Designs..
+        </span>
+        <br><br>
+        <div>
+          <h4 style="color: #222222;">I'm Yasir Masood</h4>
+          <p class="text-secondary">My name is Yasir Masood a professional website developer from Rawalpindi Pakistan.I
+            completed my BS degree in computer science in March 2022 from COMSATS University Pakistan.My skills and job
+            details are given in the skills section and also in my CV You can download my CV by just clicking the
+            following Download CV button.</p>
+          <div class="d-flex flex-wrap justify-content-around text-white rounded py-1"
+            style="background: linear-gradient(to right, #6e49f5, #f158c0);">
+            <div>
+              <ul>
+                <li><strong>Birthday : </strong><span> 1 Nov 1996</span></li>
+                <li><strong>Age : </strong><span> 26</span></li>
+                <li><strong>Status : </strong><span> Engaged</span></li>
+
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><strong>Religion : </strong><span> Muslim</span></li>
+                <li><strong>Phone : </strong><span> +923065778113</span></li>
+                <li><strong>Degree : </strong><span> BS(CS)</span></li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <!--  <div class="text-md-center py-5">
+             <button class="about_btn btn btn-lg text-dark p-4 p-4 bg-mediumaquamarine" >Download CV<i class="d-none d-md-inline ms-3 fa-solid fa-arrow-down"></i> </button>
+           </div> -->
+      </div>
+
+      <div class="col-12 col-sm-2 col-xs-2 col-lg-2 col-md-2 border-0 border-end border"></div>
+
+    </div>
+
+  </section>
+  <hr style="height: 2px;">
+
+  <!-- About Section Ends -->
+  <!-- Skills Section Starts -->
+  <section class="p-md-4" id="skillss">
+
+    <div class="row ">
+
+
+      <div id="education" class="col-12 col-md-12 col-sm-12 col-lg-12 d-flex justify-content-center">
+        <div>
+          <h3 class="p-3 ps-md-5 text-center">
+
+            Experience</h3>
+
+
+          <div class="d-flex flex-wrap justify-content-center gap-5">
+            <div class="edu-card rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0">
+              <div class="card-body">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <p class="text-gradient"><b>Self Employed</b></p>
+                  <div>
+                    <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Mar 2022 - Present</span>
+                  </div>
+                </div>
+                <h6><b>Web Developer</b></h6>
+                <p class="text-mute">I started Learning HTML in March 2022 and now I am a Full Stack Developer,
+                  Specially No one can compete with me in front end development. I have made almost 50+ websites till
+                  now from March 2022.</p>
+              </div>
+            </div>
+            <div class="edu-card rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0">
+              <div class="card-body">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <p class="text-gradient"><b>UnitedSol Islamabad</b></p>
+                  <div>
+                    <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Mar 2022 - Oct 2022</span>
+                  </div>
+                </div>
+                <h6><b>Wordpress Developer</b></h6>
+                <p class="text-mute">Development and Improvement of WooCommerce solutions for online consumers with
+                  HTML,CSS,JS,Jquery and PHP in Wordpress.</p>
+              </div>
+            </div>
+            <div class="edu-card bg-dark rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0">
+              <div class="card-body text-dark">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <p class="text-gradient"><b>SnipByte Islamabad</b></p>
+                  <div>
+                    <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Dec 2022 - Dec 2023</span>
+                  </div>
+                </div>
+                <h6><b>Full Stack Developer</b></h6>
+                <p class="text-mute">Designing and Development web templates with proficiency in
+                  HTML,CSS,Bootstrap,JS,jQuery and PHP.</p>
+              </div>
+            </div>
+            <div class="edu-card bg-dark rounded-3 border-gradient border-5 border-end-0 border-top-0 border-bottom-0">
+              <div class="card-body text-dark">
+                <div class="d-flex justify-content-between flex-wrap">
+                  <p class="text-gradient"><b>ODL Islamabad</b></p>
+                  <div>
+                    <i class="fa-solid fa-calendar-days me-2 text-gradient"></i><span>Jan 2024 - Present</span>
+                  </div>
+                </div>
+                <h6><b>ReactJs Developer</b></h6>
+
+                <p class="text-mute">Development of Websites with proficiency in ReactJS,Bootstrap,TailwindCSS. Learning
+                  Mern Stack.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row ">
 
       <div class="col-12 col-lg-12 col-md-12 col-sm-12">
 
         <div>
-        
-        <h3 class="p-3 px-0 text-center">Skills</h3>
 
-        <div class="d-flex flex-wrap gap-3 justify-content-center p-1 p-md-2 px-4">
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-html5 mx-auto h1" style="color: #E34F26;"></i>
-						<h6 class="text-dark">HTML</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-css3-alt mx-auto h1" style="color: #1572B6;"></i>
-						<h6 class="text-dark">CSS</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-bootstrap mx-auto h1" style="color: #563d7c;"></i>
-						<h6 class="text-dark">Bootstrap</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-react mx-auto h1" style="color:#61DAFB;"></i>
-						<h6 class="text-dark">ReactJs</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-js mx-auto h1" style="color: #f0db4f;"></i>
-						<h6 class="text-dark">JavaScript</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-solid fa-file-code mx-auto h1" style="color: #0769AD;"></i>
-						<h6 class="text-dark">jQuery</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-php mx-auto h1" style="color: #8892BF;"></i>
-						<h6 class="text-dark">PHP</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-brands fa-wordpress mx-auto h1" style="color: #21759B;"></i>
-						<h6 class="text-dark">Wordpress</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-            <img style="width: 3rem; height: 3rem;" class="mx-auto" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png">
+          <h3 class="p-3 px-0 text-center">Skills</h3>
 
-						<h6 class="text-dark">Woo <br> Commerce</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-solid fa-question mx-auto h1" style="color: #21759B;"></i>
+          <div class="d-flex flex-wrap gap-3 justify-content-center p-1 p-md-2 px-4">
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-html5 mx-auto h1" style="color: #E34F26;"></i>
+              <h6 class="text-dark">HTML</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-css3-alt mx-auto h1" style="color: #1572B6;"></i>
+              <h6 class="text-dark">CSS</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-bootstrap mx-auto h1" style="color: #563d7c;"></i>
+              <h6 class="text-dark">Bootstrap</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-react mx-auto h1" style="color:#61DAFB;"></i>
+              <h6 class="text-dark">ReactJs</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-js mx-auto h1" style="color: #f0db4f;"></i>
+              <h6 class="text-dark">JavaScript</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-solid fa-file-code mx-auto h1" style="color: #0769AD;"></i>
+              <h6 class="text-dark">jQuery</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-php mx-auto h1" style="color: #8892BF;"></i>
+              <h6 class="text-dark">PHP</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-brands fa-wordpress mx-auto h1" style="color: #21759B;"></i>
+              <h6 class="text-dark">Wordpress</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <img style="width: 3rem; height: 3rem;" class="mx-auto"
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/woocommerce-icon.png">
 
-						<h6 class="text-dark">Learning<br>NodeJs</h6>
-					</div>
-          <div class=" text-center rounded border" style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
-						<i class="fa-solid fa-question mx-auto h1" style="color: #21759B;"></i>
+              <h6 class="text-dark">Woo <br> Commerce</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-solid fa-question mx-auto h1" style="color: #21759B;"></i>
 
-						<h6 class="text-dark">Learning<br>NextJs</h6>
-					</div>
+              <h6 class="text-dark">Learning<br>NodeJs</h6>
+            </div>
+            <div class=" text-center rounded border"
+              style="width:6rem; height: 6rem; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;">
+              <i class="fa-solid fa-question mx-auto h1" style="color: #21759B;"></i>
+
+              <h6 class="text-dark">Learning<br>NextJs</h6>
+            </div>
+          </div>
+        </div>
+        <div class=" mt-5 p-md-5 p-3 w-100">
+
+          <h3 class="mx-md-auto">Blog <span class="text-gradient">Writing</span></h3>
+          <p class="text-dark mx-md-auto h5">
+            I am also a blog writer and I have written 20+ blogs as well. I can easily write a blog on any topic.<br>
+            You can see <a class="text-info" href="https://snipbyte.com/blogs">My Blogs</a>.</p>
+
+        </div>
+
+        <div>
+
+
+
         </div>
       </div>
-      <div class=" mt-5 p-md-5 p-3 w-100">      
 
-      <h3 class="mx-md-auto">Blog <span class="text-gradient">Writing</span></h3>
-      <p class="text-dark mx-md-auto h5">
-        I am also a blog writer and I have written 20+ blogs as well. I can easily write a blog on any topic.<br> You can see <a class="text-info" href="https://snipbyte.com/blogs">My Blogs</a>.</p>
-      
-      </div>
 
-      <div>
-        
-       
-
-      </div>
-    </div>
-
-    
   </section>
   <hr style="height: 2px;">
-    <!-- Skills Section Ends -->
+  <!-- Skills Section Ends -->
 
-    <!-- Portfolio Section Starts -->
-    <section class="p-md-5 h-100" id="portfolio">
-      <div class="d-flex gap-3 justify-content-center text-mediumaquamarine py-3 "> 
-        <span class="h1 text-dark">Portfolio</span>
-      </div>
-      <div class="d-none d-md-block">
+  <!-- Portfolio Section Starts -->
+  <section class="p-md-5 h-100" id="portfolio">
+    <div class="d-flex gap-3 justify-content-center text-mediumaquamarine py-3 ">
+      <span class="h1 text-dark">Portfolio</span>
+    </div>
+    <!-- <div class="d-none d-md-block">
         <div  class="d-flex justify-content-center gap-3 py-3">
           <span class="bg-dark line mt-3"></span>
           <button class="btn filter-btn active bg-mediumaquamarine text-white"><b>I have developed many more websites but I am providing some major websites here</b></button>
           <span class="bg-dark line mt-3"></span>
         </div>
+      </div> -->
+    <div class="d-none d-md-block">
+      <div class="d-flex justify-content-center gap-3 py-3">
+        <span class="bg-dark line mt-3"></span>
+        <button class="btn filter-btn active bg-mediumaquamarine text-white" onclick="filterItems('all')">All</button>
+        <button class="btn filter-btn bg-mediumaquamarine text-white" onclick="filterItems('react')">React</button>
+        <button class="btn filter-btn bg-mediumaquamarine text-white"
+          onclick="filterItems('bootstrap')">Bootstrap</button>
+        <button class="btn filter-btn bg-mediumaquamarine text-white" onclick="filterItems('css')">CSS</button>
+        <button class="btn filter-btn bg-mediumaquamarine text-white" onclick="filterItems('others')">Others</button>
+        <span class="bg-dark line mt-3"></span>
       </div>
+    </div>
 
-      <div class="d-flex justify-content-around flex-wrap gap-3 p-3 about-content text-dark">
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2FheroImg.webp&w=750&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>SnipByte Company Website</h6>
-            <p>SnipByte Company Website, I have made this in ReactJS</p>
-            <a href="https://snipbyte.com/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-          
-         
-        
+    <div class="d-flex justify-content-around flex-wrap gap-3 p-3 about-content text-dark portfolio-cardss">
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2FheroImg.webp&w=750&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">SnipByte Company Website</h6>
+          <p class="project_name">SnipByte Company Website, I have made this in ReactJS</p>
+          <a href="https://snipbyte.com/" class="btn bg-mediumaquamarine text-white">View Demo</a>
         </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://images.squarespace-cdn.com/content/v1/5e70de3a54220b2862e17000/790b631d-200d-46e6-8583-050100389000/IMG_8805_2-2.jpg?format=1500w" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Heartbeat Ventures</h6>
-            <p>A Wordpress Website, I have made this in Wordpress.</p>
-            <a href="https://www.heartbeat.ventures/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-        
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fcathy%20pearl%20portfolio%20website%20template.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Cathy Pearl Portfolio Page</h6>
-            <p>Cathy Pearl Portfolio Website, I have made this in Bootstrap 5</p>
-            <a href="https://cathyperl-portfolio.vercel.app/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fadvance%20to%20do%20list.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Advance Habbit List</h6>
-            <p>Advance Habbit List Using HTML CSS Bootstrap and JavaScript for snipbytesol</p>
-            <a href="https://snipbyte.github.io/habit-list/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2Fwetime%20chat%20bot%20.webp&w=750&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>WETIME Bot in ReactJS</h6>
-            <p>AI-based couples games that are designed to enhance gaming experience with your partner</p>
-            <a href="https://wetime-faixirk.vercel.app/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://woodemos.extendons.com/carddesigner/wp-content/uploads/2022/12/1-324x324.jpg" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Wedding Card & Flyer Designer Plugin
-            </h6>
-            <p>WooCommerce Business, Wedding Card & Flyer Designer Plugin, An HTML CSS and PHP Plugin in Wordpress</p>          
-            <a href="https://woodemos.extendons.com/carddesigner/shop/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2Fgame-time.webp&w=750&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Game Time</h6>
-            <p>Agaming website in Bootstrap. Discover, add, and explore a wide array of games while accessing.</p>
-            <a href="https://movie-time-git-master-kashifx6.vercel.app/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-        
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fhotel%20management%20system%20in%20php.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Hotel Management System</h6>
-            <p>PHP and Bootstrap Hotel Management System.</p>
-            <a href="https://snipbyte.github.io/hotel-management-system/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fonline%20attendance%20system%20in%20php%20complete%20source%20code%20by%20snipbyte.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Online Attendance Management System</h6>
-            <p>Online Attendance Management System In HTML,CSS, PHP for SnipbyteSol</p>
-            <a href="https://snipbyte.com/blogpost/online-attendance-management-system-php-source-code-snipbyte" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fcelebrity%20portfolio%20website%20template%20using%20html%20css%20bootstrap%20and%20js.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Celebrity Portfolio Website</h6>
-            <p>Celebrity Portfolio Website Template Using HTLM CSS Bootstrap and JavaScript for SnipbyteSol.</p>
-            <a href="https://snipbyte.github.io/celebrity-portfolio/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2FParlour%20Portfolio%20Website%20Using%20Html%20Css%20and%20JavaScript.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Beaty Parlour Website</h6>
-            <p>Beaty Parlour Website Template Using Html Css and JavaScript for snipbytesol</p>
-            <a href="https://snipbyte.github.io/beautyparlourportfolio/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fe-commerce%20using%20html%20css%20bootstrap%20javascript%20and%20jQuery.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Mini E-Commerce Template</h6>
-            <p>Mini e-commerce Template Using HTML , CSS , Bootstrap , JavaScript and jQuery for SnipbyteSol.</p>
-            <a href="https://snipbyte.github.io/mini-commerce/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fadvance%20portfolio%20using%20html%20css%20bootstrap%20and%20javascript.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>Pooja Sharma Advance Portfolio Website</h6>
-            <p>Advance Portfolio Using HTML , CSS , Bootstrap and JavaScript for SnipByteSol</p>
-            <a href="https://snipbyte.github.io/advance-portfolio/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
-        <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
-          <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fe%20commerce%20landing%20page%20template.webp&w=828&q=80" class="card-img-top img-fluid">
-          <div class="card-body">
-            <h6>E commerce Website Landing Page</h6>
-            <p>E commerce Website Landing Page Design Using Bootstrap 5 and Html 5 for Snipbytesol</p>
-            <a href="https://snipbyte.github.io/blue-gradient-e-commerce-landing-page/" class="btn bg-mediumaquamarine text-white">View Demo</a>
-          </div>
-        </div>
-
 
 
 
       </div>
-    </section>
-    <!-- Portfolio Section Ends -->
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5e70de3a54220b2862e17000/790b631d-200d-46e6-8583-050100389000/IMG_8805_2-2.jpg?format=1500w"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Heartbeat Ventures</h6>
+          <p class="project_name">A Wordpress Website, I have made this in Wordpress.</p>
+          <a href="https://www.heartbeat.ventures/" class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fcathy%20pearl%20portfolio%20website%20template.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Cathy Pearl Portfolio Page</h6>
+          <p class="project_name">Cathy Pearl Portfolio Website, I have made this in Bootstrap 5</p>
+          <a href="https://cathyperl-portfolio.vercel.app/" class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fadvance%20to%20do%20list.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Advance Habbit List</h6>
+          <p class="project_name">Advance Habbit List Using HTML CSS Bootstrap and JavaScript for snipbytesol</p>
+          <a href="https://snipbyte.github.io/habit-list/" class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2Fwetime%20chat%20bot%20.webp&w=750&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">WETIME Bot in ReactJS</h6>
+          <p class="project_name">React AI-based couples games that are designed to enhance gaming experience with your
+            partner</p>
+          <a href="https://wetime-faixirk.vercel.app/" class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img src="https://woodemos.extendons.com/carddesigner/wp-content/uploads/2022/12/1-324x324.jpg"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Wedding Card & Flyer Designer Plugin
+          </h6>
+          <p class="project_name">WooCommerce Business, Wedding Card & Flyer Designer Plugin, An HTML CSS and PHP Plugin
+            in Wordpress</p>
+          <a href="https://woodemos.extendons.com/carddesigner/shop/" class="btn bg-mediumaquamarine text-white">View
+            Demo</a>
+        </div>
+      </div>
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img src="https://snipbyte.com/_next/image?url=%2Fassets%2Fimages%2Fwebp%2Fgame-time.webp&w=750&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Game Time</h6>
+          <p class="project_name">Agaming website in Bootstrap. Discover, add, and explore a wide array of games while
+            accessing.</p>
+          <a href="https://movie-time-git-master-kashifx6.vercel.app/" class="btn bg-mediumaquamarine text-white">View
+            Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fhotel%20management%20system%20in%20php.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Hotel Management System</h6>
+          <p class="project_name">PHP and Bootstrap Hotel Management System.</p>
+          <a href="https://snipbyte.github.io/hotel-management-system/" class="btn bg-mediumaquamarine text-white">View
+            Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fonline%20attendance%20system%20in%20php%20complete%20source%20code%20by%20snipbyte.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Online Attendance Management System</h6>
+          <p class="project_name">Online Attendance Management System In HTML,CSS, PHP for SnipbyteSol</p>
+          <a href="https://snipbyte.com/blogpost/online-attendance-management-system-php-source-code-snipbyte"
+            class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fcelebrity%20portfolio%20website%20template%20using%20html%20css%20bootstrap%20and%20js.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Celebrity Portfolio Website</h6>
+          <p class="project_name">Celebrity Portfolio Website Template Using HTLM CSS Bootstrap and JavaScript for
+            SnipbyteSol.</p>
+          <a href="https://snipbyte.github.io/celebrity-portfolio/" class="btn bg-mediumaquamarine text-white">View
+            Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2FParlour%20Portfolio%20Website%20Using%20Html%20Css%20and%20JavaScript.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Beaty Parlour Website</h6>
+          <p class="project_name">Beaty Parlour Website Template Using Html Css and JavaScript for snipbytesol</p>
+          <a href="https://snipbyte.github.io/beautyparlourportfolio/" class="btn bg-mediumaquamarine text-white">View
+            Demo</a>
+        </div>
+      </div>
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fe-commerce%20using%20html%20css%20bootstrap%20javascript%20and%20jQuery.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Mini E-Commerce Template</h6>
+          <p class="project_name">Mini e-commerce Template Using HTML , CSS , Bootstrap , JavaScript and jQuery for
+            SnipbyteSol.</p>
+          <a href="https://snipbyte.github.io/mini-commerce/" class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fadvance%20portfolio%20using%20html%20css%20bootstrap%20and%20javascript.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">Pooja Sharma Advance Portfolio Website</h6>
+          <p class="project_name">Advance Portfolio Using HTML , CSS , Bootstrap and JavaScript for SnipByteSol</p>
+          <a href="https://snipbyte.github.io/advance-portfolio/" class="btn bg-mediumaquamarine text-white">View
+            Demo</a>
+        </div>
+      </div>
+
+      <div class="cardd border text-white p-1 text-center rounded-3" style="width: 18rem;">
+        <img
+          src="https://snipbyte.com/_next/image?url=%2Fuploads%2Fe%20commerce%20landing%20page%20template.webp&w=828&q=80"
+          class="card-img-top img-fluid">
+        <div class="card-body">
+          <h6 class="">E commerce Website Landing Page</h6>
+          <p class="project_name">E commerce Website Landing Page Design Using Bootstrap 5 and Html 5 for Snipbytesol
+          </p>
+          <a href="https://snipbyte.github.io/blue-gradient-e-commerce-landing-page/"
+            class="btn bg-mediumaquamarine text-white">View Demo</a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+  <!-- Portfolio Section Ends -->
 
 
 
 
 
 
-    
-   <!-- Contact Section Starts -->
-   <section class="contact-section bg-mediumaquamarine w-100
+
+  <!-- Contact Section Starts -->
+  <section class="contact-section bg-mediumaquamarine w-100
    " id="contact">
-   <div class="d-flex py-5 gap-3 justify-content-center text-mediumaquamarine">        
-  </div>
+    <div class="d-flex py-5 gap-3 justify-content-center text-mediumaquamarine">
+    </div>
 
-  <div class="d-md-none">
-    <h3 class="w-100 text-center text-white">
-      Feel Free to Contact Me
-    </h3>
-    <div class="text-center  py-3 d-flex align-items-center gap-4 w-100 justify-content-center rounded-start h-100">
-     <span class="bg-dark rounded mx-5" style="height:70px;width:5px;" data-aos = "fade-up"></span>
-     <a href="https://wa.me/+923065778113">
-      <i class="py-2 h5 me-md-0 fa-brands fa-whatsapp text-white"></i></a><a href="https://www.facebook.com/yasir.doll.50702769">
-       <i class="py-2 h5 me-md-0 fa-brands fa-facebook text-white"></i></a>
-       <a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
-         <i class="py-2 h5 me-md-0 fa-brands fa-instagram text-white"></i></a>
-         <span class="bg-dark rounded mx-5" style="height:70px;width:5px;" data-aos = "fade-up"></span>
-       </div>
-     </div>
-     <div class="d-none d-md-block">
+    <div class="d-md-none">
+      <h3 class="w-100 text-center text-white">
+        Feel Free to Contact Me
+      </h3>
+      <div class="text-center  py-3 d-flex align-items-center gap-4 w-100 justify-content-center rounded-start h-100">
+        <span class="bg-dark rounded mx-5" style="height:70px;width:5px;" data-aos="fade-up"></span>
+        <a href="https://wa.me/+923065778113">
+          <i class="py-2 h5 me-md-0 fa-brands fa-whatsapp text-white"></i></a><a
+          href="https://www.facebook.com/yasir.doll.50702769">
+          <i class="py-2 h5 me-md-0 fa-brands fa-facebook text-white"></i></a>
+        <a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+          <i class="py-2 h5 me-md-0 fa-brands fa-instagram text-white"></i></a>
+        <span class="bg-dark rounded mx-5" style="height:70px;width:5px;" data-aos="fade-up"></span>
+      </div>
+    </div>
+    <div class="d-none d-md-block">
       <h1 class="w-100 text-center text-white">
         Feel Free to Contact Me
       </h1>
       <div class="text-center py-3 d-flex align-items-center gap-5 rounded-start h-100">
-       <span class="bg-mediumaquamarine mx-auto rounded mb-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
-       <a href="https://snipbyte.com">
-         <i class="py-2 me-3 h5 me-md-0 fa-brands fa-facebook text-white"></i></a><a href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
-           <i class="py-2 me-3 h5 me-md-0 fa-brands fa-instagram text-white"></i></a><a href=" https://snipbyte.com">
-             <i class="py-2 me-3 h5 me-md-0 fa-brands fa-twitter text-white"></i>
-           </a><a href=" https://snipbyte.com">
-             <i class="py-2 me-3 h5 me-md-0 fa-brands fa-google-plus text-white"></i></a><a href=" https://snipbyte.com">
-               <i class="py-2 h5 fa-brands fa-linkedin text-white"></i></a>
-               <span class="bg-mediumaquamarine mx-auto rounded mt-2" style="height:70px;width:5px;" data-aos = "fade-up"></span>
-             </div>
-           </div>
-           <div>
-            <div class="d-flex flex-wrap gap-5 py-5 justify-content-center text-white">
-              <div>
-                <i class="fa-solid fa-phone me-2 text-dark" style="font-size: 32px;"></i>
-                <span>+923065778113</span>
-              </div>
-              <div>
-                <i class="fa-solid fa-envelope me-2 text-dark" style="font-size: 32px;"></i> 
-                <span>yasirkh261@gmail.com</span>
-              </div>
-              <div>
-                <i class="fa-solid fa-location-dot me-2 text-dark" style="font-size: 32px;"></i> 
-                <span>Islamabad</span>
-              </div>
-            </div>
+        <span class="bg-mediumaquamarine mx-auto rounded mb-2" style="height:70px;width:5px;" data-aos="fade-up"></span>
+        <a href="https://snipbyte.com">
+          <i class="py-2 me-3 h5 me-md-0 fa-brands fa-facebook text-white"></i></a><a
+          href="https://instagram.com/ym54800122023?igshid=NGVhN2U2NjQ0Yg==">
+          <i class="py-2 me-3 h5 me-md-0 fa-brands fa-instagram text-white"></i></a><a href=" https://snipbyte.com">
+          <i class="py-2 me-3 h5 me-md-0 fa-brands fa-twitter text-white"></i>
+        </a><a href=" https://snipbyte.com">
+          <i class="py-2 me-3 h5 me-md-0 fa-brands fa-google-plus text-white"></i></a><a href=" https://snipbyte.com">
+          <i class="py-2 h5 fa-brands fa-linkedin text-white"></i></a>
+        <span class="bg-mediumaquamarine mx-auto rounded mt-2" style="height:70px;width:5px;" data-aos="fade-up"></span>
+      </div>
+    </div>
+    <div>
+      <div class="d-flex flex-wrap gap-5 py-5 justify-content-center text-white">
+        <div>
+          <i class="fa-solid fa-phone me-2 text-dark" style="font-size: 32px;"></i>
+          <span>+923065778113</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-envelope me-2 text-dark" style="font-size: 32px;"></i>
+          <span>yasirkh261@gmail.com</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-location-dot me-2 text-dark" style="font-size: 32px;"></i>
+          <span>Islamabad</span>
+        </div>
+      </div>
 
-          </div>
-        </section>
-        <!-- Contact Section Ends -->
-        <footer> 
-          <div class="p-4 text-center text-white bg-dark">
-            &#169; YASIRMASOOD 2023 | All Rights Reserved
+    </div>
+  </section>
+  <!-- Contact Section Ends -->
+  <footer>
+    <div class="p-4 text-center text-white bg-dark">
+      &#169; YASIRMASOOD 2023 | All Rights Reserved
 
 
-          </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      </body>
-      </html>
-      <script type="text/javascript">
-        $(document).ready(function()
-        {
-          var typed = new Typed(".heading-typing", {
-            strings: ["Masood"],
-            typeSpeed: 200,
-            loop: false
-          });
-          $(".typed-cursor").hide();  
-        })
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
 
-// Active Navbar starts
+</html>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var typed = new Typed(".heading-typing", {
+      strings: ["Masood"],
+      typeSpeed: 200,
+      loop: false
+    });
+    $(".typed-cursor").hide();
+  })
 
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll(".nav-link");
-        window.onscroll = () => {
-          var current = "";
+  // Active Navbar starts
 
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 60) {
-              current = section.getAttribute("id"); }
-            });
+  const sections = document.querySelectorAll("section");
+  const navLi = document.querySelectorAll(".nav-link");
+  window.onscroll = () => {
+    var current = "";
 
-          navLi.forEach((a) => {
-            a.classList.remove("current");
-            if (a.classList.contains(current)) {
-              a.classList.add("current");
-            }
-          });
-        };
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 60) {
+        current = section.getAttribute("id");
+      }
+    });
 
-// Active Navbar ends
+    navLi.forEach((a) => {
+      a.classList.remove("current");
+      if (a.classList.contains(current)) {
+        a.classList.add("current");
+      }
+    });
+  };
 
-// Animations using Gsap
-        const tl1  = gsap.timeline();
-        let home = document.querySelector(".home-heading");
-        let homePara = document.querySelector(".home-para");
+  // Active Navbar ends
 
-        tl1.from(
+  // Animations using Gsap
+  const tl1 = gsap.timeline();
+  let home = document.querySelector(".home-heading");
+  let homePara = document.querySelector(".home-para");
 
-          home,
-          {
-            opacity: 0,
-            y: 20,
-            duration: 1,
-            ease: "power2.inOut",
-          })
-        .from(homePara, {
-          opacity: 0,
-          x: 50,
-          duration: 0.3,
-          ease: "bounce.out",
-        });
+  tl1.from(
+
+    home,
+    {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      ease: "power2.inOut",
+    })
+    .from(homePara, {
+      opacity: 0,
+      x: 50,
+      duration: 0.3,
+      ease: "bounce.out",
+    });
 
 
   // Register the ScrollTrigger plugin
-        gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   // Create a timeline
-        const tl6 = gsap.timeline({
-          scrollTrigger: {
+  const tl6 = gsap.timeline({
+    scrollTrigger: {
       trigger: ".animation-section", // Replace with the actual trigger element or selector
       start: "top center", // When the top of the trigger element is at the center of the viewport
       end: "bottom center", // When the bottom of the trigger element is at the center of the viewport
@@ -1157,45 +1357,45 @@ marquee h1
     },
   });
 
-        const about_heading = document.querySelector(
-          ".about-heading"
-          );
-        const about_para = document.querySelector(".about_para");
-        const about_Image = document.querySelector(".about_Image");
-        const about_btn = document.querySelector(".about_btn");
+  const about_heading = document.querySelector(
+    ".about-heading"
+  );
+  const about_para = document.querySelector(".about_para");
+  const about_Image = document.querySelector(".about_Image");
+  const about_btn = document.querySelector(".about_btn");
 
   // Define your animations within the timeline
-        tl6
-        .from(about_heading, {
-          opacity: 0,
-          y: 20,
-          duration: 0.5,
-          ease:"power2.inOut",
-        })
+  tl6
+    .from(about_heading, {
+      opacity: 0,
+      y: 20,
+      duration: 0.5,
+      ease: "power2.inOut",
+    })
 
-        .from(about_para, {
-          opacity: 0,
-          duration: 0.4,
-          x: 50,
-          ease: "bounce.out",
-        })
-        .from(about_Image, {
-          opacity: 0,
-          y: 50,
-          duration: 1,
-          ease: "circ.Out",
-        })
-        .from(about_btn, {
-          opacity: 0,
-          y: 50,
-          duration: 0.2,
-          ease: "power2.inOut",
-        });
+    .from(about_para, {
+      opacity: 0,
+      duration: 0.4,
+      x: 50,
+      ease: "bounce.out",
+    })
+    .from(about_Image, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "circ.Out",
+    })
+    .from(about_btn, {
+      opacity: 0,
+      y: 50,
+      duration: 0.2,
+      ease: "power2.inOut",
+    });
 
 
 
-        const tl7 = gsap.timeline({
-          scrollTrigger: {
+  const tl7 = gsap.timeline({
+    scrollTrigger: {
       trigger: ".exp-section", // Replace with the actual trigger element or selector
       start: "top center", // When the top of the trigger element is at the center of the viewport
       end: "bottom center", // When the bottom of the trigger element is at the center of the viewport
@@ -1204,46 +1404,80 @@ marquee h1
     },
   });
 
-        const exp_heading = document.querySelector(
-          ".exp_heading"
-          );
-        const exp_para = document.querySelector(".exp_para");
-        const exp_para1 = document.querySelector(".exp_para1");
-        const exp_para2 = document.querySelector(".exp_para2");
-        const exp_para3 = document.querySelector(".exp_para3");
+  const exp_heading = document.querySelector(
+    ".exp_heading"
+  );
+  const exp_para = document.querySelector(".exp_para");
+  const exp_para1 = document.querySelector(".exp_para1");
+  const exp_para2 = document.querySelector(".exp_para2");
+  const exp_para3 = document.querySelector(".exp_para3");
 
 
   // Define your animations within the timeline
-        tl7
-        .from(exp_heading, {
-          opacity: 0,
-          y: 10,
-          duration: 0.3,
-          ease:"circ.Out",
-        })
+  tl7
+    .from(exp_heading, {
+      opacity: 0,
+      y: 10,
+      duration: 0.3,
+      ease: "circ.Out",
+    })
 
-        .from(exp_para, {
-          opacity: 0,
-          duration: 0.3,
-          x: 50,
-          ease: "circ.Out",
-        })
-        .from(exp_para1, {
-          opacity: 0,
-          y: 50,
-          duration: 0.3,
-          ease: "circ.Out",
-        })
-        .from(exp_para2, {
-          opacity: 0,
-          y: 50,
-          duration: 0.3,
-          ease: "circ.Out",
-        })
-        .from(exp_para3, {
-          opacity: 0,
-          y: 50,
-          duration: 0.3,
-          ease: "circ.Out",
-        });
-      </script>
+    .from(exp_para, {
+      opacity: 0,
+      duration: 0.3,
+      x: 50,
+      ease: "circ.Out",
+    })
+    .from(exp_para1, {
+      opacity: 0,
+      y: 50,
+      duration: 0.3,
+      ease: "circ.Out",
+    })
+    .from(exp_para2, {
+      opacity: 0,
+      y: 50,
+      duration: 0.3,
+      ease: "circ.Out",
+    })
+    .from(exp_para3, {
+      opacity: 0,
+      y: 50,
+      duration: 0.3,
+      ease: "circ.Out",
+    });
+
+
+  // Filter
+
+
+  function filterItems(category) {
+    // Get all cards
+    const cards = document.querySelectorAll('.cardd');
+
+    // Show all cards initially
+    cards.forEach(card => {
+      card.style.display = 'block';
+    });
+
+    // If category is not 'all', hide cards that don't match the category
+    if (category !== 'all') {
+      cards.forEach(card => {
+        const project_name = card.querySelector(".project_name").innerText.toLowerCase();
+        if (!project_name.includes(category)) {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Change active button class
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(button => {
+      if (button.innerText.toLowerCase() === category) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+  }
+</script>
